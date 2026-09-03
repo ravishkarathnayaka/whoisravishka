@@ -9,6 +9,7 @@
   --paper: #f4f1eb;
   --muted: #9a9894;
   --line: rgba(255, 255, 255, 0.12);
+  --pad: clamp(1.2rem, 3.5vw, 3.5rem);
 }
 
 /* Custom Scrollbar */
@@ -40,11 +41,11 @@
 /* Typography stroke for outline hero name */
 .text-stroke {
   color: transparent;
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.75);
+  -webkit-text-stroke: 1.2px #ffffff;
 }
 .text-stroke-orange {
   color: transparent;
-  -webkit-text-stroke: 1.5px #ff4d00;
+  -webkit-text-stroke: 1.2px #ff4d00;
 }
 
 /* Clipped polygon portrait frame */
@@ -56,70 +57,120 @@
   clip-path: polygon(0 0, 89% 0, 100% 11%, 100% 100%, 11% 100%, 0 89%);
 }
 
+/* Diagonal 120deg split background exact to whoislsam */
+.hero-exact-split {
+  background: radial-gradient(circle at 68% 44%, #311006 0%, transparent 27%), linear-gradient(120deg, #ff4d00 0 48%, #0a0a0a 48%);
+}
+
+.hero-exact-split::after {
+  content: "";
+  position: absolute;
+  left: 48%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.16);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Topbar 120deg split background */
+.topbar-exact-split {
+  background: linear-gradient(120deg, rgba(255, 77, 0, 0.95) 0 48%, rgba(8, 8, 8, 0.92) 48%);
+  backdrop-filter: blur(18px) saturate(1.15);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+}
+
+.topbar-scrolled-exact {
+  background: rgba(7, 7, 7, 0.95) !important;
+  border-bottom: 1px solid rgba(255, 77, 0, 0.32);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28), inset 0 -1px rgba(255, 77, 0, 0.1);
+}
+
+/* Clipped Wordmark target badge */
+.wm-target-badge {
+  clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
+}
+
+/* Round arrow link */
+.round-link-exact {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+.round-link-exact:hover {
+  background: #ff4d00;
+  border-color: #ff4d00;
+  color: #000000;
+  transform: rotate(-45deg);
+}
+
 /* Subtle tech grid background */
 .tech-grid-bg {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
 }
 
-/* Radar rings */
-.radar-grid {
-  background: repeating-radial-gradient(
-    circle,
-    transparent 0 19%,
-    rgba(255, 77, 0, 0.2) 19.5% 20%,
-    transparent 20.5% 39%
-  );
-}
-
-/* Keyframe animations */
+/* Radar Sweep Animation */
 @keyframes radarSweep {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes laserScan {
-  0%, 10% { top: -2%; opacity: 0; }
-  25% { opacity: 0.85; }
-  80% { top: 102%; opacity: 0.65; }
-  100% { top: 102%; opacity: 0; }
-}
-
-@keyframes orbitSpin {
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-@keyframes orbitSpinRev {
-  to { transform: translate(-50%, -50%) rotate(-360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .animate-radar-sweep {
-  animation: radarSweep 3.6s linear infinite;
+  animation: radarSweep 4s linear infinite;
+  transform-origin: center center;
+}
+
+/* Laser Scanline for portrait */
+@keyframes laserScan {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
 }
 
 .animate-laser-scan {
-  animation: laserScan 4.5s ease-in-out infinite;
+  animation: laserScan 3s ease-in-out infinite;
+}
+
+/* Orbital Rings */
+@keyframes orbitSpin1 {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes orbitSpin2 {
+  0% { transform: translate(-50%, -50%) rotate(45deg); }
+  100% { transform: translate(-50%, -50%) rotate(-315deg); }
 }
 
 .animate-orbit-1 {
-  animation: orbitSpin 14s linear infinite;
+  animation: orbitSpin1 24s linear infinite;
 }
 
 .animate-orbit-2 {
-  animation: orbitSpinRev 20s linear infinite;
-}
-
-/* Glass panel */
-.glass-panel {
-  background: rgba(12, 13, 20, 0.75);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.glass-panel-orange {
-  background: rgba(12, 13, 20, 0.85);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 77, 0, 0.35);
-  box-shadow: 0 0 50px rgba(255, 77, 0, 0.08);
+  animation: orbitSpin2 36s linear infinite;
 }

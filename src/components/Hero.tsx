@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowDownRight, Award, ShieldCheck } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export const Hero: React.FC = () => {
@@ -8,113 +7,118 @@ export const Hero: React.FC = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-[100svh] pt-32 pb-14 flex flex-col justify-between overflow-hidden border-b border-white/10"
-      style={{
-        background: 'radial-gradient(circle at 74% 38%, rgba(255, 77, 0, 0.16) 0%, transparent 42%), linear-gradient(135deg, #060709 0%, #0a0c12 100%)'
-      }}
+      className="hero-exact-split relative min-h-[100svh] overflow-hidden flex flex-col justify-between pt-28 sm:pt-32 pb-10 sm:pb-12 px-6 sm:px-10 lg:px-14 select-none"
     >
       {/* Background Animated Orbital Rings */}
-      <div className="absolute top-1/2 left-[68%] w-[680px] h-[260px] -translate-x-1/2 -translate-y-1/2 rounded-[50%] border border-[#ff4d00]/20 pointer-events-none animate-orbit-1 hidden md:block" />
-      <div className="absolute top-1/2 left-[68%] w-[880px] h-[340px] -translate-x-1/2 -translate-y-1/2 rounded-[50%] border border-white/5 pointer-events-none animate-orbit-2 hidden md:block" />
+      <div className="absolute top-1/2 left-[66%] w-[570px] h-[190px] -translate-x-1/2 -translate-y-1/2 rounded-[50%] border border-[#ff4d00]/25 pointer-events-none animate-orbit-1 hidden md:block" />
+      <div className="absolute top-1/2 left-[66%] w-[760px] h-[260px] -translate-x-1/2 -translate-y-1/2 rounded-[50%] border border-white/5 pointer-events-none animate-orbit-2 hidden md:block" />
 
-      {/* Vertical subtle aesthetic divider */}
-      <div className="absolute left-[48%] top-0 bottom-0 w-px bg-white/[0.04] pointer-events-none hidden lg:block" />
+      {/* Center 3D Cyber Art (Exact cyber-oracle figure from whoislsam) */}
+      <div className="absolute left-[54%] md:left-[48%] top-[50%] -translate-x-[42%] -translate-y-[50%] w-[85vw] max-w-[560px] pointer-events-none z-10 select-none">
+        <img 
+          src="/assets/cyber-oracle.png" 
+          alt="Abstract black chrome cybernetic figure dissolving into orange data particles"
+          className="w-full h-auto object-contain filter drop-shadow-[0_0_50px_rgba(255,77,0,0.25)]"
+        />
+      </div>
 
-      {/* Floating Ethereal Telemetry Markers (Exact whoislsam style - no bulky cards!) */}
-      <div className="hidden lg:flex absolute top-32 right-12 z-20 flex-col items-end gap-6 font-mono text-[11px] tracking-wider pointer-events-none">
-        {/* Telemetry 1: Defensive Posture with orange accent line */}
-        <div className="pl-4 border-l-2 border-[#ff4d00] text-right">
-          <span className="text-[#9a9894] block text-[9px] uppercase tracking-widest">DEFENSIVE POSTURE</span>
-          <strong className="text-white font-medium text-xs tracking-wider flex items-center justify-end gap-2">
-            <span>RESILIENT / DEVSECOPS</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00f59b] animate-ping" />
-          </strong>
-        </div>
-
-        {/* Telemetry 2: Most Valuable Leadership */}
-        <div className="text-right">
-          <span className="text-[#ff4d00] block text-[9px] uppercase tracking-widest font-semibold flex items-center justify-end gap-1.5">
-            <Award size={11} className="text-[#ff4d00]" />
-            <span>PRIMARY LEADERSHIP</span>
+      {/* Top Telemetry A (Top right over dark background) */}
+      <div className="hidden lg:flex absolute top-[125px] right-10 lg:right-14 z-20 flex-col items-end font-mono pointer-events-none">
+        <div className="pl-4 border-l border-[#ff4d00] text-right">
+          <span className="text-[#ff4d00] block text-[9px] uppercase tracking-widest mb-1">
+            DEFENSIVE POSTURE
           </span>
-          <strong className="text-white font-serif text-sm font-medium tracking-normal block">
-            CHAIRMAN
-          </strong>
-          <span className="text-[#9a9894] text-[10px] uppercase tracking-wider block">
-            IEEE Computer Society of SLTC
-          </span>
+          <div className="flex items-center justify-end gap-2">
+            <strong className="text-white font-normal text-xs tracking-wider">RESILIENT</strong>
+            <i className="inline-block w-8 h-[3px] bg-gradient-to-r from-[#ff4d00] from-70% to-[#333] to-70%" />
+          </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full flex-1 flex flex-col justify-between relative z-10">
-        {/* Top Kicker */}
-        <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-[#9a9894] mb-8 sm:mb-12">
-          <span className="text-[#ff4d00] font-bold">01</span>
-          <span className="h-px w-8 bg-white/20" />
-          <div className="flex flex-wrap items-center gap-x-2">
-            <span className="text-white font-medium">CYBERSECURITY &amp; DEVOPS</span>
-            <span className="text-white/30">/</span>
-            <span>SRI LANKA · {profile.location}</span>
+      {/* Telemetry B (Right-middle over dark background) */}
+      <div className="hidden lg:block absolute right-10 lg:right-14 top-[58%] text-right font-mono pointer-events-none z-20">
+        <span className="text-[#ff4d00] block text-[9px] uppercase tracking-widest mb-1">
+          PRIMARY LEADERSHIP
+        </span>
+        <strong className="text-white font-normal text-xs tracking-wider block">
+          CHAIRMAN — IEEE CS
+        </strong>
+        <small className="text-[#9a9894] text-[10px] block mt-0.5 tracking-wider uppercase">
+          STUDENT BRANCH CHAPTER SLTC
+        </small>
+      </div>
+
+      {/* Telemetry C: Monospace code snippet */}
+      <div className="hidden xl:block absolute left-[51%] bottom-[6%] text-left font-mono pointer-events-none z-20 opacity-60">
+        <code className="text-[10px] text-[#ff4d00] leading-relaxed block">
+          $ ravishkadev --status<br />
+          | devsecops: active<br />
+          | pipeline: 99.9% uptime
+        </code>
+      </div>
+
+      {/* Top Kicker (Top left on the orange side) */}
+      <div className="relative z-20 max-w-[500px]">
+        <div className="flex items-start gap-4 font-mono text-xs uppercase tracking-widest">
+          <span className="text-white font-bold text-sm sm:text-base">01</span>
+          <div>
+            <b className="text-white font-semibold text-xs sm:text-sm block tracking-wider leading-snug">
+              CYBERSECURITY &amp; DEVOPS / BASED IN SRI LANKA
+            </b>
+            <small className="text-[#260900] font-medium text-[10px] sm:text-[11px] tracking-wider block mt-1">
+              SLTC · FIRST CLASS TRACK · CHAIRMAN — IEEE COMPUTER SOCIETY
+            </small>
           </div>
         </div>
+      </div>
 
-        {/* Main Center Area: Giant Typography & Floating Editorial Copy */}
-        <div className="relative my-auto py-6">
-          {/* Floating Editorial Narrative Copy (Right-aligned above/beside text) */}
-          <div className="lg:absolute lg:top-0 lg:right-0 z-30 max-w-sm mb-6 lg:mb-0">
-            <p className="font-serif italic text-lg sm:text-xl text-[#f4f1eb] leading-relaxed">
-              "{profile.tagline}"
-            </p>
-            <div className="flex items-center gap-4 mt-4">
-              <a 
-                href="#projects"
-                className="group w-13 h-13 sm:w-14 sm:h-14 rounded-full border border-white/30 flex items-center justify-center text-white hover:border-[#ff4d00] hover:bg-[#ff4d00] hover:text-black transition-all duration-300 shadow-[0_0_20px_rgba(255,77,0,0.2)]"
-                aria-label="Explore selected work"
-              >
-                <ArrowDownRight size={22} className="group-hover:rotate-[-45deg] transition-transform duration-300" />
-              </a>
-              <span className="font-mono text-[11px] uppercase tracking-widest text-[#9a9894]">
-                Explore Real Projects
-              </span>
-            </div>
-          </div>
-
-          {/* Majestic Hero Name (Full screen breathing space, Zero clipping!) */}
-          <h1 className="font-serif tracking-tight select-none pointer-events-none">
-            <span className="block text-[15vw] sm:text-[13vw] lg:text-[9.2rem] xl:text-[10.5rem] font-medium text-white leading-[0.82] drop-shadow-2xl">
-              RAVISHKA
-            </span>
-            <span className="block text-[15vw] sm:text-[13vw] lg:text-[9.2rem] xl:text-[10.5rem] font-medium text-stroke leading-[0.82] ml-3 sm:ml-8 lg:ml-16 -mt-2 sm:-mt-4 lg:-mt-6 transition-colors hover:text-stroke-orange">
-              RATHNAYAKA
-            </span>
-          </h1>
+      {/* Center Display: Giant Typographic Name + Floating Editorial Copy */}
+      <div className="relative z-20 my-auto py-8 sm:py-12">
+        {/* Floating Editorial Copy (Top-right of name) */}
+        <div className="hidden md:block absolute right-0 lg:right-4 top-0 z-20 w-[min(320px,26vw)]">
+          <p className="font-serif text-lg lg:text-xl text-[#f4f1eb] leading-snug">
+            Securing systems, <em className="text-[#ff4d00] not-italic italic">automating</em> pipelines, and capturing stories through the lens.
+          </p>
+          <a 
+            href="#projects" 
+            className="round-link-exact mt-6"
+            aria-label="Explore selected work"
+          >
+            ↘
+          </a>
         </div>
 
-        {/* Hero Bottom Bar: Role, Prestigious Leadership & Scroll Note */}
-        <div className="pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-12 gap-6 items-end">
-          {/* Bottom Left: Identity & Leadership */}
-          <div className="md:col-span-8 space-y-2">
-            <div className="font-serif text-2xl sm:text-3xl lg:text-4xl text-white font-medium leading-tight">
-              Cybersecurity Undergraduate<br />
-              <span className="text-[#9a9894] font-normal italic">&amp; MLOps / DevOps Enthusiast</span>
-            </div>
-            
-            <div className="flex flex-wrap items-center gap-2 pt-1 font-mono text-xs">
-              <span className="px-2.5 py-1 rounded bg-[#ff4d00]/15 text-[#ff4d00] border border-[#ff4d00]/40 font-semibold tracking-wider uppercase">
-                {profile.primaryLeadership}
-              </span>
-              <span className="text-white/40">·</span>
-              <span className="text-[#9a9894] uppercase tracking-wider">
-                Videographer &amp; Media Director
-              </span>
-            </div>
-          </div>
+        {/* The Exact whoislsam Giant Typography */}
+        <h1 
+          className="font-serif tracking-tight select-none pointer-events-none leading-[0.72]"
+          style={{ letterSpacing: '-0.075em' }}
+        >
+          <span className="block text-[15vw] sm:text-[13vw] lg:text-[10.5rem] xl:text-[12.5rem] font-medium text-white drop-shadow-2xl">
+            RAVISHKA
+          </span>
+          <span className="block text-[15vw] sm:text-[13vw] lg:text-[10.5rem] xl:text-[12.5rem] font-medium text-stroke ml-[8%] sm:ml-[14%] -mt-[0.08em] transition-colors hover:text-stroke-orange">
+            RATHNAYAKA
+          </span>
+        </h1>
+      </div>
 
-          {/* Bottom Right: Scroll to explore */}
-          <div className="md:col-span-4 flex md:justify-end items-center gap-2 font-mono text-xs text-[#9a9894] uppercase tracking-widest pr-16">
-            <span>Scroll to explore</span>
-            <span className="text-[#ff4d00] animate-bounce">↓</span>
+      {/* Hero Bottom: Role on orange side + Scroll note on dark side */}
+      <div className="relative z-20 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        {/* Bottom Left: Identity & Role */}
+        <div>
+          <div className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-white leading-[1.05] tracking-tight">
+            Cybersecurity Undergraduate<br />
+            <span className="text-white/95 font-normal">&amp; MLOps / DevOps Enthusiast</span>
           </div>
+          <small className="block mt-3 font-mono text-[10px] sm:text-[11px] uppercase tracking-wider text-[#260900] font-medium">
+            PUBLIC IDENTITY: RAVISHKA RATHNAYAKA · CHAIRMAN — IEEE COMPUTER SOCIETY OF SLTC
+          </small>
+        </div>
+
+        {/* Bottom Right: Scroll to explore */}
+        <div className="font-mono text-xs uppercase tracking-widest text-[#9a9894] flex items-center gap-2 pb-1">
+          <span>Scroll to explore</span>
+          <span className="text-[#ff4d00] font-bold animate-bounce">↓</span>
         </div>
       </div>
     </section>
