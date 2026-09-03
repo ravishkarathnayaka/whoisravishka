@@ -96,7 +96,7 @@ export const portfolioData = {
       { count: "4+", label: "Years in Tech", sub: "Continuous hands-on practice" },
       { count: "18+", label: "GitHub Repositories", sub: "DevSecOps, SOAR & AI builds" },
       { count: "21+", label: "Tech Events Led", sub: "CloudSpace, Codemania & IEEE" },
-      { count: "4.0", label: "HND GPA / First Class", sub: "SLTC Cyber Security & ICET" }
+      { count: "4.0", label: "HND GPA (ICET)", sub: "Computer Engineering" }
     ],
     telemetry: {
       posture: "DEVSECOPS / ACTIVE",
@@ -353,7 +353,7 @@ export const portfolioData = {
   credentials: [
     {
       id: "cred-sltc-degree",
-      title: "BSc (Hons) in Cyber Security (First Class)",
+      title: "BSc (Hons) in Cyber Security",
       issuer: "Sri Lanka Technology Campus (SLTC)",
       issueDate: "2024 - 2028",
       category: "academic",
@@ -462,7 +462,6 @@ export const portfolioData = {
       organization: "Sri Lanka Technology Campus (SLTC)",
       location: "Padukka, Sri Lanka",
       type: "education",
-      achievement: "First Class Honours Track",
       description: "Specializing in network security, system defense, digital forensics, incident response, and cloud security architecture.",
       tags: ["Cyber Security", "Network Defense", "Linux Hardening", "Forensics"]
     },

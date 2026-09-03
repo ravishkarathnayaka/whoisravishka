@@ -8,7 +8,6 @@ import { SocConsole } from './components/SocConsole';
 import { Constellation } from './components/Constellation';
 import { ProjectsArchive } from './components/ProjectsArchive';
 import { JourneyTimeline } from './components/JourneyTimeline';
-import { CredentialsVault } from './components/CredentialsVault';
 import { CommunitySection } from './components/CommunitySection';
 import { WritingSection } from './components/WritingSection';
 import { CreativeBanner } from './components/CreativeBanner';
@@ -34,7 +33,6 @@ export function App() {
         <Constellation />
         <ProjectsArchive />
         <JourneyTimeline />
-        <CredentialsVault />
         <CommunitySection />
         <WritingSection />
         <CreativeBanner />

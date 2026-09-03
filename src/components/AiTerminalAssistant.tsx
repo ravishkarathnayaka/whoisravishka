@@ -79,7 +79,7 @@ export const AiTerminalAssistant: React.FC = () => {
         reply = "Key documented builds include:\n1. Hardened CI/CD & Automated DevSecOps Pipeline (Trivy + K8s)\n2. Local LLM Inference Engine & RAG Pipeline (Ollama + LangChain)\n3. CloudSpace v1.0 National Event Platform\n4. Codemania V6.0 Datathon Engine\n5. Automated Vulnerability & Reconnaissance Tool\n6. CineVision Videography Portfolio";
         links = [{ label: 'Explore Project Archive', href: '#work' }];
       } else if (lower.includes('experience') || lower.includes('work') || lower.includes('metadew') || lower.startsWith('/experience')) {
-        reply = "Career Field Log:\n• Metadew Technologies: Digital Marketing Specialist (Apr 2026 - Present)\n• Metadew Technologies: Application Support Engineer (Jan 2023 - Mar 2026)\n• Fiverr: Freelance Developer (2022 - Present)\n• Education: BSc (Hons) Cyber Security at SLTC (First Class Track), ICET HND (4.0 GPA), SLIM Diploma.";
+        reply = "Career Field Log:\n• Metadew Technologies: Digital Marketing Specialist (Apr 2026 - Present)\n• Metadew Technologies: Application Support Engineer (Jan 2023 - Mar 2026)\n• Fiverr: Freelance Developer (2022 - Present)\n• Education: BSc (Hons) Cyber Security at SLTC (Undergraduate, 2024 - 2028), ICET HND (4.0 GPA), SLIM Diploma.";
         links = [{ label: 'View Full Timeline', href: '#journey' }];
       } else if (lower.includes('cert') || lower.includes('credential')) {
         reply = "Ravishka holds 15+ verified credentials including Microsoft Azure AZ-900, Cisco Network Defense & Cybersecurity, Fortinet Associate, Docker Essentials, and Python PCAP.";
