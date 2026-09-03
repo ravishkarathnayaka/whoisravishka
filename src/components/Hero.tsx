@@ -29,10 +29,10 @@ export const Hero: React.FC = () => {
         <span className="text-white/75 font-mono mr-4 text-xs">01</span>
         <div className="inline-block align-top">
           <b className="font-semibold text-white tracking-wider block text-xs">
-            CYBERSECURITY &amp; DEVOPS / BASED IN SRI LANKA
+            CYBERSECURITY UNDERGRADUATE
           </b>
           <small className="block mt-1 text-[#260900] font-medium text-[11px] tracking-wider uppercase">
-            SLTC · FIRST CLASS TRACK · CHAIRMAN — IEEE COMPUTER SOCIETY
+            PASSIONATE ABOUT SECURITY, ARTIFICIAL INTELLIGENCE &amp; SYSTEMS
           </small>
         </div>
       </div>
