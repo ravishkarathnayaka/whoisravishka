@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layers, ArrowUpRight } from 'lucide-react';
+import { Layers, ArrowUpRight, Github, ExternalLink } from 'lucide-react';
 import { portfolioData, Project } from '../data/portfolioData';
 import { ProjectModal } from './ProjectModal';
 
@@ -10,9 +10,9 @@ export const ProjectsArchive: React.FC = () => {
 
   const categories = [
     { key: 'all', label: 'ALL PROJECTS' },
-    { key: 'cybersecurity', label: 'CYBERSECURITY' },
+    { key: 'cybersecurity', label: 'CYBERSECURITY & SOAR' },
     { key: 'devops', label: 'DEVOPS & CLOUD' },
-    { key: 'mlops', label: 'MLOPS & AI' },
+    { key: 'fullstack', label: 'FULL-STACK & APPS' },
     { key: 'media', label: 'MEDIA & CREATIVE' }
   ];
 
@@ -28,35 +28,35 @@ export const ProjectsArchive: React.FC = () => {
           <div>
             <div className="font-mono text-xs uppercase tracking-widest text-[#ff4d00] mb-3 flex items-center gap-2">
               <Layers size={14} className="text-[#ff4d00]" />
-              <span>// Things I've Built</span>
+              <span>// Things I've Built &amp; Deployed</span>
             </div>
             <h2 className="font-serif text-4xl sm:text-6xl font-medium tracking-tight text-white leading-tight">
               PROJECTS &amp;<br />
-              <i className="text-[#ff4d00] not-italic italic font-normal">TECHNICAL BUILDS.</i>
+              <i className="text-[#ff4d00] not-italic italic font-normal">REAL-WORLD BUILDS.</i>
             </h2>
           </div>
           <p className="text-[#9a9894] text-sm max-w-sm font-sans leading-relaxed">
-            A selection of projects that showcase skills in machine learning operations, cloud computing, datathon platforms, and videography.
+            Production DevSecOps pipelines, multi-cloud automated SOAR architectures, AI-assisted web systems, and live cloud applications from my GitHub and LinkedIn.
           </p>
         </div>
 
         {/* Project Command Strip */}
         <div className="grid grid-cols-2 md:grid-cols-4 border border-white/15 bg-black/50 p-6 rounded-t-xl divide-y md:divide-y-0 md:divide-x divide-white/10 font-mono">
           <div className="p-3">
-            <strong className="text-3xl text-white font-serif block">06</strong>
-            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Documented Projects</span>
+            <strong className="text-3xl text-white font-serif block">08</strong>
+            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Documented Builds</span>
           </div>
           <div className="p-3">
-            <strong className="text-3xl text-white font-serif block">04</strong>
-            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Technical Domains</span>
+            <strong className="text-3xl text-white font-serif block">18+</strong>
+            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">GitHub Repositories</span>
           </div>
           <div className="p-3">
-            <strong className="text-3xl text-[#ff4d00] font-serif block">2026</strong>
-            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Active Development</span>
+            <strong className="text-3xl text-[#ff4d00] font-serif block">SLSA 3</strong>
+            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Compliant Security</span>
           </div>
           <div className="p-3">
             <strong className="text-3xl text-[#00f59b] font-serif block">100%</strong>
-            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Real-World Delivered</span>
+            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Verified Repositories</span>
           </div>
         </div>
 
@@ -116,7 +116,7 @@ export const ProjectsArchive: React.FC = () => {
 
                 {/* Tags and Inspect Arrow */}
                 <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                  <div className="flex flex-wrap gap-1.5 max-w-[80%]">
+                  <div className="flex flex-wrap gap-1.5 max-w-[75%]">
                     {project.tags.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
@@ -132,13 +132,35 @@ export const ProjectsArchive: React.FC = () => {
                     )}
                   </div>
 
-                  <span className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:border-[#ff4d00] group-hover:bg-[#ff4d00] group-hover:text-black transition-all">
-                    <ArrowUpRight size={14} />
-                  </span>
+                  <div className="flex items-center gap-2">
+                    {project.github && (
+                      <span className="text-[#9a9894] group-hover:text-white transition-colors p-1">
+                        <Github size={14} />
+                      </span>
+                    )}
+                    <span className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:border-[#ff4d00] group-hover:bg-[#ff4d00] group-hover:text-black transition-all">
+                      <ArrowUpRight size={14} />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* GitHub Footnote Link */}
+        <div className="p-6 border-x border-b border-white/15 bg-black/40 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-[#9a9894]">
+          <span>EXPLORE ALL 18+ OPEN-SOURCE REPOSITORIES ON GITHUB</span>
+          <a
+            href="https://github.com/ravishkarathnayaka"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 rounded border border-white/20 bg-white/5 hover:border-[#ff4d00] hover:text-[#ff4d00] transition-colors text-white"
+          >
+            <Github size={14} />
+            <span>github.com/ravishkarathnayaka</span>
+            <ExternalLink size={12} />
+          </a>
         </div>
       </div>
 

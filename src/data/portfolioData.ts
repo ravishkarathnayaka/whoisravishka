@@ -93,7 +93,7 @@ export const portfolioData = {
     },
     metrics: [
       { count: "4+", label: "Years in Tech", sub: "Continuous hands-on practice" },
-      { count: "25+", label: "Completed Projects", sub: "DevOps, Security & AI builds" },
+      { count: "18+", label: "GitHub Repositories", sub: "Open-source & enterprise builds" },
       { count: "21+", label: "Tech Events Led", sub: "CloudSpace, Codemania & IEEE" },
       { count: "4.0", label: "HND GPA / First Class", sub: "SLTC Cyber Security & ICET" }
     ],
@@ -116,25 +116,25 @@ export const portfolioData = {
       {
         number: "01",
         title: "Cybersecurity Analyst",
-        desc: "Analyze threats, secure systems, and protect digital assets across modern cloud and network environments.",
+        desc: "Analyze threats, secure software supply chains (SLSA Level 3), audit container vulnerabilities, and protect digital assets.",
         badge: "DEFENSE"
       },
       {
         number: "02",
         title: "Cloud & DevOps Engineering",
-        desc: "Build APIs, automate CI/CD delivery pipelines, orchestrate containers, and provision infrastructure.",
+        desc: "Build automated CI/CD pipelines, multi-cloud SOAR incident response, containerize with Docker, and orchestrate with Kubernetes.",
         badge: "AUTOMATION"
       },
       {
         number: "03",
-        title: "MLOps & AI Systems",
-        desc: "Build RAG pipelines, deploy local LLMs with Ollama, fine-tune models, and optimize inference latency.",
-        badge: "AI & DATA"
+        title: "Full-Stack & AI Systems",
+        desc: "Develop full-stack web applications with React, TypeScript, Python, and Supabase; deploy machine learning prediction models.",
+        badge: "AI & SOFTWARE"
       },
       {
         number: "04",
         title: "Videography & Community",
-        desc: "Direct cinematic recap films, volunteer across 21+ tech events, and lead national developer initiatives.",
+        desc: "Direct cinematic event recap films, lead national datathons and cloud conferences, and volunteer across 21+ tech events.",
         badge: "MEDIA & LEADERSHIP"
       }
     ],
@@ -166,9 +166,9 @@ export const portfolioData = {
       y: 48,
       isCore: true,
       category: "Cybersecurity & Systems Defense",
-      tools: ["Vulnerability Assessment", "Linux Hardening", "Network Security", "Wireshark", "Nmap"],
-      summary: "Threat analysis, system audits, and digital infrastructure protection.",
-      description: "Rooted in his BSc in Cyber Security at SLTC. Focuses on vulnerability assessments, system hardening, and secure-by-design principles across cloud and on-premise environments.",
+      tools: ["Supply Chain Security", "SLSA Level 3", "Cosign Keyless", "Kyverno", "Trivy", "Linux Hardening"],
+      summary: "Software supply chain security, automated threat detection, and system audits.",
+      description: "Rooted in his BSc in Cyber Security at SLTC. Specializes in SLSA Level 3 compliant pipelines, SBOM generation, cryptographic artifact signing with Cosign, and Kubernetes admission policies.",
       connectedTo: ["docker", "devops", "cloud", "mlops", "python", "video"]
     },
     {
@@ -177,9 +177,9 @@ export const portfolioData = {
       x: 24,
       y: 18,
       category: "Containerization",
-      tools: ["Docker Engine", "Docker Compose", "Multi-Stage Builds", "Container Security"],
-      summary: "Containerization and reproducible microservices execution.",
-      description: "Packaging full-stack applications, machine learning microservices, and datathon evaluation sandboxes inside minimal, secure container images.",
+      tools: ["Docker Engine", "Docker Compose", "Google Distroless", "Multi-stage Builds"],
+      summary: "Containerization and minimal attack surfaces.",
+      description: "Packaging full-stack microservices, multi-cloud SOAR engines, and datathon sandboxes inside hardened Google Distroless containers with zero root privileges.",
       connectedTo: ["sec-ops", "devops", "k8s"]
     },
     {
@@ -188,9 +188,9 @@ export const portfolioData = {
       x: 48,
       y: 12,
       category: "Container Orchestration",
-      tools: ["Kubernetes", "Cluster Architecture", "Service Mesh", "Deployments"],
-      summary: "Automated scaling, self-healing clusters, and rollout management.",
-      description: "Deploying resilient services with declarative manifests, load balancing, and health check monitoring.",
+      tools: ["Kubernetes", "Kyverno PSS", "Cluster Security", "Admission Control"],
+      summary: "Automated scaling, admission control, and resilient deployments.",
+      description: "Deploying containerized workloads governed by Kyverno Pod Security Standards (PSS) Restricted profile, preventing unsigned image deployment.",
       connectedTo: ["docker", "devops", "cloud"]
     },
     {
@@ -198,10 +198,10 @@ export const portfolioData = {
       label: "DEVOPS",
       x: 78,
       y: 20,
-      category: "CI/CD & Automation",
-      tools: ["GitHub Actions", "Jenkins", "Terraform", "GitOps"],
-      summary: "Automated test, build, security scan, and deployment workflows.",
-      description: "Shifting security checks left into the development lifecycle with GitHub Actions, automated vulnerability scanning, and infrastructure as code.",
+      category: "CI/CD & DevSecOps",
+      tools: ["GitHub Actions", "Terraform", "SBOM (SPDX)", "Semgrep SAST", "Gitleaks"],
+      summary: "Automated build, security scan, and multi-cloud deployment pipelines.",
+      description: "Building production CI/CD workflows integrating Gitleaks secret detection, Semgrep SAST scanning, Trivy container auditing, and Cosign keyless signing.",
       connectedTo: ["sec-ops", "docker", "cloud"]
     },
     {
@@ -209,10 +209,10 @@ export const portfolioData = {
       label: "AZURE\n& AWS",
       x: 85,
       y: 54,
-      category: "Cloud Engineering",
-      tools: ["Microsoft Azure", "AWS", "Serverless", "Cloud Architecture"],
-      summary: "Scalable cloud infrastructure and cloud application deployments.",
-      description: "Architecting cloud deployments across Microsoft Azure and AWS, utilizing blob storage, container instances, and serverless backends.",
+      category: "Multi-Cloud Engineering",
+      tools: ["Microsoft Azure", "Azure Static Web Apps", "AWS Free Tier", "LocalStack", "Terraform"],
+      summary: "Multi-cloud infrastructure, serverless SOAR, and cloud deployments.",
+      description: "Deploying web applications to Azure Static Web Apps and architecting serverless incident response pipelines on AWS and LocalStack with Terraform IaC.",
       connectedTo: ["sec-ops", "devops", "mlops"]
     },
     {
@@ -220,10 +220,10 @@ export const portfolioData = {
       label: "MLOPS\n& AI",
       x: 68,
       y: 82,
-      category: "Machine Learning Operations",
-      tools: ["Ollama", "PyTorch", "LangChain", "FastAPI", "Vector Embeddings"],
-      summary: "Deploying local LLMs, vector search, and RAG architectures.",
-      description: "Author of technical benchmarks on running Ollama AI models on midrange consumer hardware. Building private RAG pipelines with LangChain and FastAPI.",
+      category: "Machine Learning & AI",
+      tools: ["Ollama", "Local LLMs", "PyTorch", "FastAPI", "TrialReady AI"],
+      summary: "Deploying local LLMs, AI trial readiness models, and RAG pipelines.",
+      description: "Benchmarking local quantized Ollama models on consumer hardware, and architecting AI-driven trial readiness systems for student driving academies.",
       connectedTo: ["sec-ops", "python", "cloud"]
     },
     {
@@ -231,10 +231,10 @@ export const portfolioData = {
       label: "PYTHON\n& TS",
       x: 32,
       y: 84,
-      category: "Software Development",
-      tools: ["Python", "TypeScript", "React", "FastAPI", "PostgreSQL"],
-      summary: "Full-stack development and automation scripts.",
-      description: "Developing responsive modern frontend interfaces with React/TypeScript and robust, asynchronous backend services with Python and FastAPI.",
+      category: "Full-Stack Development",
+      tools: ["TypeScript", "Python", "React 19", "FastAPI", "Supabase", "PostgreSQL"],
+      summary: "Full-stack web applications, socket systems, and REST APIs.",
+      description: "Developing production React/TypeScript web apps like TrialReady LK and UniFlow, coupled with Python FastAPI backends and WebSocket protocol systems.",
       connectedTo: ["sec-ops", "mlops", "docker"]
     },
     {
@@ -252,71 +252,128 @@ export const portfolioData = {
 
   projects: [
     {
-      id: "ai-chat-assistant",
-      title: "AI Chat Assistant with RAG Pipeline",
-      category: "mlops",
-      categoryLabel: "MLOps & Artificial Intelligence",
-      description: "A conversational AI assistant built with LLMs and RAG pipeline for document-based Q&A.",
-      longDescription: "A conversational AI system designed to index complex documentation and provide real-time, context-aware answers. Utilizes an intelligent RAG (Retrieval-Augmented Generation) pipeline, vector embeddings, and a high-performance FastAPI backend.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop",
-      tags: ["Python", "LangChain", "FastAPI", "React", "Vector DB"],
-      metrics: "Sub-second RAG Retrieval · Local & Cloud LLMs",
-      github: "https://github.com/ravishkarathnayaka",
-      live: "https://github.com/ravishkarathnayaka",
+      id: "slsa-level-3-pipeline",
+      title: "Enterprise Software Supply Chain Security (SLSA Level 3)",
+      category: "cybersecurity",
+      categoryLabel: "DevSecOps & Supply Chain Security",
+      description: "Automated SLSA Level 3 DevSecOps pipeline with SBOM generation, Cosign cryptographic signing, and Kyverno Kubernetes admission control.",
+      longDescription: "A production-grade, zero-cost reference implementation of an automated, end-to-end secure software supply chain pipeline. Complete alignment with the Supply-chain Levels for Software Artifacts (SLSA) v1.0 Level 3 specification, automated SBOM generation (SPDX/CycloneDX), keyless cryptographic signing via Sigstore / Cosign, Google Distroless container hardening, Semgrep SAST, Gitleaks secrets detection, Trivy container auditing, and Kyverno policy-based admission control in Kubernetes.",
+      image: "https://images.unsplash.com/photo-1618401471353-b98aedd04e11?q=80&w=1200&auto=format&fit=crop",
+      tags: ["Shell", "SLSA Level 3", "Cosign", "Kyverno", "Kubernetes", "Trivy", "Semgrep", "Gitleaks"],
+      metrics: "SLSA Level 3 Compliant · Zero CVEs Deployed",
+      github: "https://github.com/ravishkarathnayaka/Enterprise-Software-Supply-Chain-Security-SLSA-Level-3-Pipeline.",
+      live: "https://github.com/ravishkarathnayaka/Enterprise-Software-Supply-Chain-Security-SLSA-Level-3-Pipeline.",
       highlights: [
-        "Document ingestion engine supporting PDFs, Markdown, and text files",
-        "Semantic similarity search utilizing local vector embeddings",
-        "FastAPI asynchronous REST endpoints with streaming response support",
-        "Interactive React frontend with clean chat UI"
+        "Cryptographic artifact signing via Sigstore / Cosign keyless OIDC workflow",
+        "Automated Software Bill of Materials (SBOM) generation adhering to SPDX format",
+        "Kyverno Pod Security Standards (PSS) Restricted profile admission enforcement",
+        "Multi-stage automated vulnerability scanning with Trivy, Semgrep, and Gitleaks"
       ]
     },
     {
-      id: "smart-image-classifier",
-      title: "Smart Deep Learning Image Classifier",
-      category: "mlops",
-      categoryLabel: "Computer Vision & AI",
-      description: "Deep learning image classification system with a web interface for real-time predictions.",
-      longDescription: "A computer vision model trained with PyTorch, packaged into an isolated Docker container, and deployed with a lightweight web interface for instant image inferences.",
-      image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1200&auto=format&fit=crop",
-      tags: ["PyTorch", "Flask", "Docker", "AWS", "Computer Vision"],
-      metrics: "96.4% Validation Accuracy · Dockerized",
-      github: "https://github.com/ravishkarathnayaka",
-      live: "https://github.com/ravishkarathnayaka",
+      id: "multi-cloud-soar-pipeline",
+      title: "Multi-Cloud Automated Threat Detection & SOAR Pipeline",
+      category: "cybersecurity",
+      categoryLabel: "Cloud Security & SOAR",
+      description: "Production-grade, modular multi-cloud threat detection and serverless SOAR pipeline with LocalStack and AWS support.",
+      longDescription: "An open-source, production-grade security engineering system delivering automated threat detection and real-time incident response (SOAR) across multi-cloud environments. Engineered for zero-cost local development using LocalStack and Docker containers, with 100% architectural parity with live AWS environments. Includes automated event ingestion, threat enrichment, containment playbooks, and Terraform IaC provisioning.",
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop",
+      tags: ["Python 3.11", "AWS", "Terraform", "SOAR", "LocalStack", "Docker", "CI/CD"],
+      metrics: "86% Test Coverage · 100% AWS Parity",
+      github: "https://github.com/ravishkarathnayaka/Multi-Cloud-Automated-Threat-Detection-SOAR-Pipeline-",
+      live: "https://github.com/ravishkarathnayaka/Multi-Cloud-Automated-Threat-Detection-SOAR-Pipeline-",
       highlights: [
-        "Trained convolutional neural network with data augmentation and transfer learning",
-        "Optimized PyTorch model export for fast CPU/GPU inference",
-        "Containerized with Docker for portable multi-environment deployment",
-        "Web interface allowing users to upload images and inspect prediction probabilities"
+        "Modular serverless incident response playbooks provisioned through Terraform",
+        "LocalStack emulation for zero-cloud-cost test and security simulation",
+        "Automated threat alert enrichment and Slack webhook incident escalation",
+        "Full CI/CD testing pipeline with automated security audits"
+      ]
+    },
+    {
+      id: "trialready-lk",
+      title: "TrialReady LK — AI-Assisted Driving Academy Management",
+      category: "fullstack",
+      categoryLabel: "Enterprise Software & AI",
+      description: "AI-assisted driving academy management & DMT practical trial readiness system engineered for Sri Lankan driving schools.",
+      longDescription: "A specialized, production-ready enterprise management platform tailored specifically to the operational, legal, and educational requirements of Sri Lankan Driving Schools under the Motor Traffic Act No. 14 of 1951. Digitizes the student lifecycle: registration, NTMI medical verification, 6-month DMT permit countdown, practical lesson tracking, and AI-driven trial readiness assessment with print-ready official forms.",
+      image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1200&auto=format&fit=crop",
+      tags: ["TypeScript 5", "React 19", "Tailwind CSS 4", "Supabase", "PostgreSQL", "Vitest"],
+      metrics: "36 Passed Tests · Legal Compliance (Act No. 14 of 1951)",
+      github: "https://github.com/ravishkarathnayaka/TrialReady-LK",
+      live: "https://github.com/ravishkarathnayaka/TrialReady-LK",
+      highlights: [
+        "AI-driven practical trial readiness evaluation and mistake pattern detection",
+        "Automated 6-month Department of Motor Traffic (DMT) learner permit timer",
+        "Print-ready official application form generation directly from database records",
+        "Built with React 19, TypeScript, Supabase PostgreSQL RLS, and Vitest suite"
+      ]
+    },
+    {
+      id: "uniflow-hub",
+      title: "UniFlow — Student Productivity Hub (Azure Static Web Apps)",
+      category: "devops",
+      categoryLabel: "Cloud Application & DevOps",
+      description: "A student productivity hub to manage university deadlines, tasks, and workloads, built with React and deployed to Microsoft Azure.",
+      longDescription: "A student productivity hub designed to help manage university tasks, deadlines, learning activities, events, and weekly workloads in one unified interface. Deployed to Microsoft Azure using Azure Static Web Apps with automated GitHub Actions CI/CD workflows from the main branch.",
+      image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
+      tags: ["React", "JavaScript", "Vite", "Microsoft Azure", "Azure Static Web Apps", "GitHub Actions"],
+      metrics: "Live on Microsoft Azure · Automated CI/CD",
+      github: "https://github.com/ravishkarathnayaka/UniFlow",
+      live: "https://red-ocean-088a0a000.7.azurestaticapps.net",
+      highlights: [
+        "Automated GitHub Actions CI/CD workflow pushing production builds to Azure",
+        "Public HTTPS production deployment hosted on Microsoft Azure Static Web Apps",
+        "Interactive dashboard for upcoming university assignment deadlines and workloads",
+        "Modular architecture ready for Azure cloud database and function integration"
+      ]
+    },
+    {
+      id: "realtime-chat-websocket",
+      title: "Real-Time Encrypted Chat Room System (Python WebSockets)",
+      category: "cybersecurity",
+      categoryLabel: "Network Protocols & Security",
+      description: "Mini-project for CCS1305 (Communication Protocols & Models) at SLTC. Multi-client socket server with encrypted message exchange.",
+      longDescription: "A robust multi-client real-time communication system built using Python socket programming and WebSockets for the CCS1305 Communication Protocols course at SLTC. Features concurrent multi-threaded client connection handling, encrypted message payload transmission, and real-time room broadcasting.",
+      image: "https://images.unsplash.com/photo-1618060932014-4deda4932554?q=80&w=1200&auto=format&fit=crop",
+      tags: ["Python", "WebSockets", "Socket Programming", "Cryptography", "Threading"],
+      metrics: "Concurrent Multi-Client · SLTC CCS1305 Project",
+      github: "https://github.com/ravishkarathnayaka/Real-Time-Chat-Room-System-using-Python-Web-Socket-",
+      live: "https://github.com/ravishkarathnayaka/Real-Time-Chat-Room-System-using-Python-Web-Socket-",
+      highlights: [
+        "Multi-threaded socket architecture supporting concurrent simultaneous users",
+        "Implementation of custom communication protocol frames and handshakes",
+        "Encrypted data streams preventing plaintext eavesdropping on the local network",
+        "Room-based message routing and automated client disconnection handling"
       ]
     },
     {
       id: "cloudspace-platform",
-      title: "CloudSpace v1.0 Conference Platform",
+      title: "CloudSpace v1.0 Conference & Registration Infrastructure",
       category: "devops",
       categoryLabel: "Cloud Computing & Community",
       description: "Sri Lanka's largest student cloud computing event platform and attendee verification system.",
-      longDescription: "As Founding Chairperson of CloudSpace v1.0, led both the event and built the registration and schedule platform for Sri Lanka's largest cloud conference at SLTC.",
+      longDescription: "As Founding Chairperson of CloudSpace v1.0, led the initiative and built the official web and registration platform for Sri Lanka's largest student cloud computing event and SLTC's first-ever cloud computing initiative.",
       image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop",
       tags: ["Next.js", "TypeScript", "Tailwind CSS", "Azure", "Cloud Architecture"],
-      metrics: "500+ Attendees · SLTC's First Cloud Initiative",
+      metrics: "500+ Registered Attendees · SLTC's First Cloud Initiative",
       github: "https://github.com/ravishkarathnayaka",
       live: "https://ieee.lk/",
       highlights: [
-        "Built responsive registration portal handling peak concurrent traffic",
-        "Automated digital confirmation and check-in workflows",
+        "Architected scalable registration engine handling peak concurrent student traffic",
         "Founded Sri Lanka's largest university cloud computing initiative",
-        "Coordinated with industry leaders, keynote speakers, and tech communities"
+        "Automated digital confirmation and check-in workflows for conference attendees",
+        "Coordinated with industry sponsors, keynote speakers, and national tech bodies"
       ]
     },
     {
       id: "codemania-datathon-platform",
-      title: "Codemania V6.0 Datathon Platform",
-      category: "cybersecurity",
+      title: "Codemania V6.0 Datathon Platform & Real-Time Leaderboard",
+      category: "fullstack",
       categoryLabel: "Datathon Engine & Security",
       description: "Real-time evaluation engine and live leaderboard for Sri Lanka's largest inter-university Datathon.",
       longDescription: "Led Codemania V6.0 as Chairperson and spearheaded the submission platform. Teams submitted machine learning prediction models evaluated live against ground-truth datasets with container sandboxing.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
-      tags: ["Python", "FastAPI", "Docker", "Redis", "Leaderboard"],
+      tags: ["Python", "FastAPI", "Docker", "Redis", "Datathon Engine"],
       metrics: "30+ Inter-University Teams · Live Scoring",
       github: "https://github.com/ravishkarathnayaka",
       live: "https://github.com/ravishkarathnayaka",
@@ -328,27 +385,8 @@ export const portfolioData = {
       ]
     },
     {
-      id: "data-pipeline-toolkit",
-      title: "Data Pipeline Toolkit",
-      category: "devops",
-      categoryLabel: "Data Engineering & DevOps",
-      description: "An automated ETL pipeline for processing and visualizing large-scale datasets.",
-      longDescription: "A data pipeline designed to ingest, clean, transform, and aggregate data streams into structured PostgreSQL databases, with Grafana dashboards for metrics visualization.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
-      tags: ["Python", "Apache Airflow", "PostgreSQL", "Grafana", "Docker"],
-      metrics: "Automated Scheduling · Resilient Data Flow",
-      github: "https://github.com/ravishkarathnayaka",
-      live: "https://github.com/ravishkarathnayaka",
-      highlights: [
-        "Automated DAG workflows orchestrating data extraction and loading",
-        "Schema validation and error isolation preventing dirty data writes",
-        "Grafana dashboards rendering throughput and processing performance",
-        "Containerized with Docker Compose for single-command deployment"
-      ]
-    },
-    {
       id: "cinevision-productions",
-      title: "CineVision & Visual Storytelling",
+      title: "CineVision & Visual Storytelling Media Productions",
       category: "media",
       categoryLabel: "Videography & Creative Media",
       description: "Cinematic commercial videos, event recap documentaries, and technical community media reels.",
