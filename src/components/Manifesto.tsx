@@ -3,40 +3,39 @@ import { ArrowUpRight, Linkedin, Github, Instagram, BookOpen } from 'lucide-reac
 import { portfolioData } from '../data/portfolioData';
 
 export const Manifesto: React.FC = () => {
-  const { profile, manifesto } = portfolioData;
+  const { profile, about } = portfolioData;
 
   return (
-    <section id="manifesto" className="py-28 bg-[#08090e] border-b border-white/10 relative">
+    <section id="about" className="py-28 bg-[#08090e] border-b border-white/10 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="font-mono text-xs uppercase tracking-widest text-[#ff4d00] mb-4">
-          {manifesto.eyebrow}
+          {about.eyebrow}
         </div>
 
         <h2 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight text-white leading-[0.95] mb-16">
-          {manifesto.displayTitle}<br />
-          <i className="text-[#ff4d00] not-italic italic font-normal">{manifesto.displayTitleItalic}</i>
+          {about.displayTitle}<br />
+          <i className="text-[#ff4d00] not-italic italic font-normal">{about.displayTitleItalic}</i>
         </h2>
 
         {/* Narrative Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-20 border-b border-white/10">
           <div className="lg:col-span-7">
             <p className="font-serif text-2xl sm:text-3xl text-[#f4f1eb] leading-snug font-normal">
-              {manifesto.lead}
+              {about.lead}
             </p>
           </div>
           <div className="lg:col-span-5 space-y-6 text-[#9a9894] text-sm md:text-base leading-relaxed font-sans">
-            <p>{manifesto.body1}</p>
-            <p>{manifesto.body2}</p>
+            <p>{about.body1}</p>
+            <p>{about.body2}</p>
           </div>
         </div>
 
-        {/* Identity Portrait Block (Editorial Aesthetic) */}
+        {/* Identity Portrait Block */}
         <div className="py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Framed Portrait */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-[420px] aspect-[4/5] portrait-polygon bg-[#12141d] p-3 border border-white/20 group">
-              {/* Inner container */}
               <div className="relative w-full h-full overflow-hidden portrait-polygon-inner bg-black">
                 <img 
                   src={profile.portrait} 
@@ -61,7 +60,7 @@ export const Manifesto: React.FC = () => {
           {/* Identity Story & Social Links */}
           <div className="lg:col-span-7 space-y-6">
             <div className="font-mono text-xs tracking-widest uppercase text-[#ff4d00]">
-              THE HUMAN BEHIND THE SIGNAL
+              CYBERSECURITY &amp; DEVOPS ENTHUSIAST · VIDEOGRAPHER
             </div>
 
             <h3 className="font-serif text-3xl sm:text-5xl font-medium text-white tracking-tight">
@@ -69,11 +68,11 @@ export const Manifesto: React.FC = () => {
             </h3>
 
             <p className="text-[#9a9894] text-base leading-relaxed max-w-xl">
-              Security is technical. Trust is human. I bring both to every deployment, threat triage investigation, cloud architecture review, and community event.
+              Undergraduate at Sri Lanka Technology Campus (SLTC) reading for BSc (Hons) in Cyber Security. Passionate about automated cloud systems, MLOps, open-source development, and visual storytelling.
             </p>
 
             <div className="font-mono text-xs text-[#9a9894] tracking-wider py-2">
-              Based in Colombo, Sri Lanka · Undergraduate at Sri Lanka Technology Campus (SLTC)
+              Based in Colombo, Sri Lanka · Founding Chair of CloudSpace v1.0 · Chair of Codemania V6.0 Datathon
             </div>
 
             {/* Social Profile Badges */}

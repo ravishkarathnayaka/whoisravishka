@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Check, Copy, Send, ArrowUpRight } from 'lucide-react';
+import { Check, Copy, Send, ArrowUpRight } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export const ContactSection: React.FC = () => {
@@ -26,7 +26,7 @@ export const ContactSection: React.FC = () => {
 
   return (
     <section id="contact" className="relative min-h-[90vh] py-28 bg-[#ff4d00] text-black overflow-hidden flex items-center">
-      {/* Background Animated Signal Rings (Exact whoislsam style) */}
+      {/* Background Animated Signal Rings */}
       <div className="absolute right-[-10vw] top-1/2 -translate-y-1/2 w-[70vw] h-[70vw] pointer-events-none" aria-hidden="true">
         <span className="absolute inset-0 rounded-full border border-black/15 animate-ping opacity-30 duration-1000" />
         <span className="absolute inset-[18%] rounded-full border border-black/20" />
@@ -39,16 +39,16 @@ export const ContactSection: React.FC = () => {
           {/* Left Column: Heading & Direct Mail Link */}
           <div className="lg:col-span-6 space-y-8">
             <div className="font-mono text-xs uppercase tracking-widest text-black/80 font-medium">
-              // OPEN SECURE CHANNEL
+              // CONNECT &amp; COLLABORATE
             </div>
 
             <h2 className="font-serif text-5xl sm:text-7xl font-medium tracking-tight text-black leading-[0.9]">
-              LET'S BUILD<br />
-              <i className="text-white not-italic italic font-normal">THE UNBREAKABLE.</i>
+              LET'S GET IN TOUCH &amp;<br />
+              <i className="text-white not-italic italic font-normal">BUILD TOGETHER.</i>
             </h2>
 
             <p className="text-black/80 text-base md:text-lg max-w-md font-sans leading-relaxed">
-              Have an opportunity, mission-critical infrastructure to secure, an AI pipeline to deploy, or a conference idea? Send the first signal.
+              Have a project in mind, need automated cloud pipelines, want to collaborate on AI systems, or produce event media? Feel free to reach out.
             </p>
 
             {/* Interactive Email Bar with Copy Button */}
@@ -95,9 +95,9 @@ export const ContactSection: React.FC = () => {
               <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-6 font-mono text-xs text-[#9a9894]">
                 <span className="flex items-center gap-2 text-white">
                   <span className="w-2 h-2 rounded-full bg-[#ff4d00]" />
-                  <span>TRANSMIT DISPATCH</span>
+                  <span>SEND A MESSAGE</span>
                 </span>
-                <span>ENC: TLS 1.3</span>
+                <span>DIRECT INBOX</span>
               </div>
 
               {submitted ? (
@@ -106,40 +106,40 @@ export const ContactSection: React.FC = () => {
                     <Check size={24} />
                   </div>
                   <h3 className="font-serif text-2xl text-white font-medium">
-                    Signal Transmitted
+                    Message Sent
                   </h3>
                   <p className="text-[#9a9894] text-xs max-w-xs mx-auto leading-relaxed font-sans">
-                    Thank you for reaching out, Ravishka will review your dispatch and get back to you shortly.
+                    Thank you for reaching out. Ravishka will get back to you shortly.
                   </p>
                   <button
                     onClick={() => { setSubmitted(false); setFormData({ name: '', email: '', subject: '', message: '' }); }}
                     className="mt-4 text-xs font-mono text-[#ff4d00] hover:underline"
                   >
-                    Send another dispatch →
+                    Send another message →
                   </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 font-mono text-xs">
                   <div>
-                    <label className="block text-[#9a9894] uppercase tracking-wider mb-1.5">Your Name *</label>
+                    <label className="block text-[#9a9894] uppercase tracking-wider mb-1.5">Name *</label>
                     <input
                       type="text"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="e.g. Sarah Connor"
+                      placeholder="Your Name"
                       className="w-full px-4 py-2.5 rounded bg-white/5 border border-white/15 text-white placeholder-white/20 focus:outline-none focus:border-[#ff4d00]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[#9a9894] uppercase tracking-wider mb-1.5">Your Email *</label>
+                    <label className="block text-[#9a9894] uppercase tracking-wider mb-1.5">Email *</label>
                     <input
                       type="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="name@domain.com"
+                      placeholder="your.email@example.com"
                       className="w-full px-4 py-2.5 rounded bg-white/5 border border-white/15 text-white placeholder-white/20 focus:outline-none focus:border-[#ff4d00]"
                     />
                   </div>
@@ -151,19 +151,19 @@ export const ContactSection: React.FC = () => {
                       required
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      placeholder="Project / Incident / Opportunity"
+                      placeholder="Subject of your message"
                       className="w-full px-4 py-2.5 rounded bg-white/5 border border-white/15 text-white placeholder-white/20 focus:outline-none focus:border-[#ff4d00]"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-[#9a9894] uppercase tracking-wider mb-1.5">Message Content *</label>
+                    <label className="block text-[#9a9894] uppercase tracking-wider mb-1.5">Message *</label>
                     <textarea
                       required
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Describe your requirement, timeline, or query..."
+                      placeholder="Your message..."
                       className="w-full px-4 py-2.5 rounded bg-white/5 border border-white/15 text-white placeholder-white/20 focus:outline-none focus:border-[#ff4d00] resize-none"
                     />
                   </div>
@@ -174,10 +174,10 @@ export const ContactSection: React.FC = () => {
                     className="w-full py-3 rounded bg-[#ff4d00] hover:bg-[#ff7137] text-black font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 mt-2"
                   >
                     {isSubmitting ? (
-                      <span>TRANSMITTING...</span>
+                      <span>SENDING...</span>
                     ) : (
                       <>
-                        <span>TRANSMIT MESSAGE</span>
+                        <span>SEND MESSAGE</span>
                         <Send size={14} />
                       </>
                     )}

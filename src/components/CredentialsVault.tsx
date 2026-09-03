@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Award, Search, ExternalLink, CheckCircle2, ShieldCheck } from 'lucide-react';
-import { portfolioData, Credential } from '../data/portfolioData';
+import { Award, Search, ExternalLink, CheckCircle2, GraduationCap } from 'lucide-react';
+import { portfolioData } from '../data/portfolioData';
 
 export const CredentialsVault: React.FC = () => {
   const { credentials } = portfolioData;
-  const [activeFilter, setActiveFilter] = useState<'all' | 'security' | 'cloud' | 'data' | 'academic'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -21,21 +20,11 @@ export const CredentialsVault: React.FC = () => {
   }, []);
 
   const filteredCredentials = credentials.filter((cred) => {
-    const matchesFilter = activeFilter === 'all' || cred.category === activeFilter;
     const matchesQuery = 
       cred.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      cred.issuer.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      (cred.credentialId && cred.credentialId.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesFilter && matchesQuery;
+      cred.issuer.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesQuery;
   });
-
-  const categories = [
-    { key: 'all', label: 'ALL CREDENTIALS' },
-    { key: 'security', label: 'SECURITY' },
-    { key: 'cloud', label: 'CLOUD & DEVOPS' },
-    { key: 'data', label: 'AI & DATA' },
-    { key: 'academic', label: 'ACADEMIC DEGREES' },
-  ];
 
   return (
     <section id="credentials" className="py-28 bg-[#08090e] border-b border-white/10 relative">
@@ -45,46 +34,33 @@ export const CredentialsVault: React.FC = () => {
           <div>
             <div className="font-mono text-xs uppercase tracking-widest text-[#ff4d00] mb-3 flex items-center gap-2">
               <Award size={14} className="text-[#ff4d00]" />
-              <span>// Verified Learning &amp; Professional Credentials</span>
+              <span>// Verified Academic &amp; Professional Qualifications</span>
             </div>
             <h2 className="font-serif text-4xl sm:text-6xl font-medium tracking-tight text-white leading-tight">
-              PROOF BEHIND<br />
-              <i className="text-[#ff4d00] not-italic italic font-normal">THE PRACTICE.</i>
+              EDUCATION &amp;<br />
+              <i className="text-[#ff4d00] not-italic italic font-normal">CREDENTIALS.</i>
             </h2>
           </div>
           <p className="text-[#9a9894] text-sm max-w-sm font-sans leading-relaxed">
-            A searchable record of academic degrees, professional certifications, and earned badges across cybersecurity, cloud architectures, and systems engineering.
+            Educational journey, academic achievements, and earned qualifications spanning cybersecurity, computer engineering, and marketing.
           </p>
         </div>
 
-        {/* Vault Controls: Categories & Search Bar */}
-        <div className="p-4 rounded-t-xl border border-white/15 bg-black/60 flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Category Tabs */}
-          <div className="flex flex-wrap gap-2 w-full md:w-auto">
-            {categories.map((cat) => (
-              <button
-                key={cat.key}
-                onClick={() => setActiveFilter(cat.key as any)}
-                className={`px-3 py-1.5 rounded-full font-mono text-[11px] tracking-wider uppercase transition-all ${
-                  activeFilter === cat.key
-                    ? 'bg-[#ff4d00] text-black font-semibold shadow-[0_0_15px_rgba(255,77,0,0.4)]'
-                    : 'border border-white/15 text-[#9a9894] hover:text-white hover:border-white/30 bg-white/[0.02]'
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
+        {/* Vault Controls: Search Bar */}
+        <div className="p-4 rounded-t-xl border border-white/15 bg-black/60 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="font-mono text-xs text-white/80">
+            REGISTER OF OFFICIAL QUALIFICATIONS
           </div>
 
           {/* Search Input with ⌘K Badge */}
-          <div className="relative w-full md:w-72">
+          <div className="relative w-full sm:w-72">
             <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#9a9894]" />
             <input
               ref={searchInputRef}
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="SEARCH THE REGISTER"
+              placeholder="SEARCH CREDENTIALS"
               className="w-full bg-[#0d0e15] border border-white/20 rounded pl-9 pr-12 py-1.5 font-mono text-xs text-white placeholder-[#9a9894] focus:outline-none focus:border-[#ff4d00] transition-colors"
             />
             <kbd className="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-white/10 font-mono text-[9px] text-[#9a9894] border border-white/10 pointer-events-none">
@@ -94,51 +70,47 @@ export const CredentialsVault: React.FC = () => {
         </div>
 
         {/* Credentials Grid */}
-        <div className="border-x border-b border-white/15 bg-[#090b10] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-y md:divide-y-0 md:gap-[1px] md:bg-white/10 shadow-2xl">
+        <div className="border-x border-b border-white/15 bg-[#090b10] grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-white/10 shadow-2xl">
           {filteredCredentials.map((cred) => (
             <div 
               key={cred.id} 
-              className="p-6 bg-[#090b10] hover:bg-[#ff4d00]/[0.03] transition-all flex flex-col justify-between group"
+              className="p-7 bg-[#090b10] hover:bg-[#ff4d00]/[0.03] transition-all flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between font-mono text-[10px] text-[#9a9894] uppercase tracking-widest mb-3">
                   <span className="text-[#ff4d00] flex items-center gap-1.5 font-medium">
-                    <ShieldCheck size={12} />
-                    <span>{cred.category.toUpperCase()}</span>
+                    <GraduationCap size={13} />
+                    <span>ACADEMIC</span>
                   </span>
                   <span>{cred.issueDate}</span>
                 </div>
 
-                <h3 className="font-serif text-lg text-white font-medium group-hover:text-[#ff4d00] transition-colors leading-snug mb-2">
+                <h3 className="font-serif text-xl sm:text-2xl text-white font-medium group-hover:text-[#ff4d00] transition-colors leading-snug mb-2">
                   {cred.title}
                 </h3>
 
                 <p className="text-[#9a9894] text-xs font-sans mb-4">
-                  Issued by: <strong className="text-white font-normal">{cred.issuer}</strong>
+                  Institution: <strong className="text-white font-normal">{cred.issuer}</strong>
                 </p>
               </div>
 
               <div className="pt-4 border-t border-white/10 flex items-center justify-between font-mono text-xs">
-                {cred.credentialId ? (
-                  <span className="text-[10px] text-[#9a9894] truncate max-w-[140px]">
-                    ID: {cred.credentialId}
-                  </span>
-                ) : (
-                  <span className="text-[10px] text-[#00f59b] flex items-center gap-1">
-                    <CheckCircle2 size={11} />
-                    VERIFIED
-                  </span>
-                )}
+                <span className="text-[11px] text-[#00f59b] flex items-center gap-1.5">
+                  <CheckCircle2 size={13} />
+                  <span>VERIFIED RECORD</span>
+                </span>
 
-                <a
-                  href={cred.verificationUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-[11px] text-[#ff4d00] hover:underline"
-                >
-                  <span>Verify</span>
-                  <ExternalLink size={11} />
-                </a>
+                {cred.verificationUrl !== '#' && (
+                  <a
+                    href={cred.verificationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-[11px] text-[#ff4d00] hover:underline"
+                  >
+                    <span>View Institution</span>
+                    <ExternalLink size={11} />
+                  </a>
+                )}
               </div>
             </div>
           ))}
@@ -146,14 +118,14 @@ export const CredentialsVault: React.FC = () => {
 
         {filteredCredentials.length === 0 && (
           <div className="border-x border-b border-white/15 bg-[#090b10] p-12 text-center font-mono text-xs text-[#9a9894]">
-            No credentials found matching your search. Clear query to reset.
+            No qualifications found matching your search.
           </div>
         )}
 
         {/* Vault Footer */}
         <div className="p-4 border-x border-b border-white/15 bg-black/40 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[10px] text-[#9a9894] uppercase tracking-wider">
-          <span>ISSUERS: SLTC · ICET · SLIM · MICROSOFT · CISCO · DOCKER · FORTINET · GOOGLE · PYTHON INSTITUTE</span>
-          <span className="text-white">Total Verified: {credentials.length} Records</span>
+          <span>INSTITUTIONS: SRI LANKA TECHNOLOGY CAMPUS (SLTC) · ICET · SLIM · T/AGRABODHI COLLEGE</span>
+          <span className="text-white">Total: {credentials.length} Qualifications</span>
         </div>
       </div>
     </section>

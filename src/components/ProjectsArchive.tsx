@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layers, ArrowUpRight, Github, ExternalLink, Terminal } from 'lucide-react';
+import { Layers, ArrowUpRight } from 'lucide-react';
 import { portfolioData, Project } from '../data/portfolioData';
 import { ProjectModal } from './ProjectModal';
 
@@ -9,7 +9,7 @@ export const ProjectsArchive: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const categories = [
-    { key: 'all', label: 'ALL OPERATIONS' },
+    { key: 'all', label: 'ALL PROJECTS' },
     { key: 'cybersecurity', label: 'CYBERSECURITY' },
     { key: 'devops', label: 'DEVOPS & CLOUD' },
     { key: 'mlops', label: 'MLOPS & AI' },
@@ -21,22 +21,22 @@ export const ProjectsArchive: React.FC = () => {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <section id="work" className="py-28 bg-[#06070a] border-b border-white/10 relative">
+    <section id="projects" className="py-28 bg-[#06070a] border-b border-white/10 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <div className="font-mono text-xs uppercase tracking-widest text-[#ff4d00] mb-3 flex items-center gap-2">
               <Layers size={14} className="text-[#ff4d00]" />
-              <span>// Selected Operations &amp; Builds</span>
+              <span>// Things I've Built</span>
             </div>
             <h2 className="font-serif text-4xl sm:text-6xl font-medium tracking-tight text-white leading-tight">
-              WORK FROM THE<br />
-              <i className="text-[#ff4d00] not-italic italic font-normal">FRONT LINE.</i>
+              PROJECTS &amp;<br />
+              <i className="text-[#ff4d00] not-italic italic font-normal">TECHNICAL BUILDS.</i>
             </h2>
           </div>
           <p className="text-[#9a9894] text-sm max-w-sm font-sans leading-relaxed">
-            A living archive of hardened pipelines, machine learning RAG deployments, national conference portals, and cyber tooling.
+            A selection of projects that showcase skills in machine learning operations, cloud computing, datathon platforms, and videography.
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export const ProjectsArchive: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 border border-white/15 bg-black/50 p-6 rounded-t-xl divide-y md:divide-y-0 md:divide-x divide-white/10 font-mono">
           <div className="p-3">
             <strong className="text-3xl text-white font-serif block">06</strong>
-            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Documented Operations</span>
+            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Documented Projects</span>
           </div>
           <div className="p-3">
             <strong className="text-3xl text-white font-serif block">04</strong>
@@ -52,11 +52,11 @@ export const ProjectsArchive: React.FC = () => {
           </div>
           <div className="p-3">
             <strong className="text-3xl text-[#ff4d00] font-serif block">2026</strong>
-            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Latest Active Release</span>
+            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Active Development</span>
           </div>
           <div className="p-3">
             <strong className="text-3xl text-[#00f59b] font-serif block">100%</strong>
-            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Containerized &amp; Verified</span>
+            <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Real-World Delivered</span>
           </div>
         </div>
 

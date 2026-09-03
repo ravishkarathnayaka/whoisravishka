@@ -1,27 +1,27 @@
 import React from 'react';
-import { Shield, Radio, Terminal } from 'lucide-react';
+import { Radio, Terminal } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export const SocConsole: React.FC = () => {
-  const { socArsenal } = portfolioData;
+  const { about } = portfolioData;
 
   return (
-    <section id="soc" className="py-28 bg-[#06070a] border-b border-white/10 relative overflow-hidden tech-grid-bg">
+    <section id="capabilities" className="py-28 bg-[#06070a] border-b border-white/10 relative overflow-hidden tech-grid-bg">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
             <div className="font-mono text-xs uppercase tracking-widest text-[#ff4d00] mb-3 flex items-center gap-2">
               <Radio size={14} className="text-[#ff4d00] animate-pulse" />
-              <span>{socArsenal.eyebrow}</span>
+              <span>// Operational Capabilities</span>
             </div>
             <h2 className="font-serif text-4xl sm:text-6xl font-medium tracking-tight text-white leading-tight">
-              {socArsenal.title}<br />
-              <i className="text-[#ff4d00] not-italic italic font-normal">{socArsenal.titleItalic}</i>
+              WHAT I DO &amp;<br />
+              <i className="text-[#ff4d00] not-italic italic font-normal">SYSTEMS I BUILD.</i>
             </h2>
           </div>
           <p className="text-[#9a9894] text-sm max-w-sm font-sans leading-relaxed">
-            {socArsenal.description}
+            Hands-on technical capabilities spanning cybersecurity defense, containerized DevOps pipelines, machine learning operations, and visual storytelling.
           </p>
         </div>
 
@@ -31,12 +31,12 @@ export const SocConsole: React.FC = () => {
           <div className="px-6 py-4 border-b border-white/10 flex items-center justify-between font-mono text-xs text-[#9a9894] tracking-widest uppercase bg-black/40">
             <div className="flex items-center gap-3">
               <span className="w-2 h-2 rounded-full bg-[#00f59b] animate-ping" />
-              <span className="text-white">SOC &amp; DEVOPS / ACTIVE OPERATIONS</span>
+              <span className="text-white">CYBERSECURITY &amp; DEVOPS / ACTIVE ARSENAL</span>
             </div>
             <div className="flex items-center gap-4 text-[11px]">
               <span className="text-[#ff4d00]">WHOISRAVISHKA</span>
               <span className="text-white/20">|</span>
-              <span>NODE: SRI-LANKA-01</span>
+              <span>SLTC / COLOMBO</span>
             </div>
           </div>
 
@@ -70,19 +70,19 @@ export const SocConsole: React.FC = () => {
                 {/* Center Core Info */}
                 <div className="relative z-10 text-center font-mono bg-[#060709]/80 px-3 py-1.5 rounded border border-white/10 backdrop-blur-sm">
                   <div className="text-white text-xs font-semibold">24×7</div>
-                  <div className="text-[#ff4d00] text-[9px] tracking-widest uppercase">MONITORED</div>
+                  <div className="text-[#ff4d00] text-[9px] tracking-widest uppercase">ACTIVE RUNTIME</div>
                 </div>
               </div>
 
               {/* Radar Caption */}
               <div className="mt-6 text-center font-mono text-xs text-[#9a9894]">
-                <span>Continuous Pipeline Security &amp; Anomaly Detection</span>
+                <span>Automated Pipelines, Threat Auditing &amp; Model Serving</span>
               </div>
             </div>
 
             {/* Right Capabilities Stack */}
             <div className="lg:col-span-7 flex flex-col justify-between divide-y divide-white/10 bg-black/20">
-              {socArsenal.capabilities.map((cap) => (
+              {about.whatIDo.map((cap) => (
                 <div 
                   key={cap.number} 
                   className="p-6 md:p-8 hover:bg-[#ff4d00]/[0.03] transition-colors group"
@@ -105,17 +105,6 @@ export const SocConsole: React.FC = () => {
                       <p className="text-[#9a9894] text-xs sm:text-sm leading-relaxed">
                         {cap.desc}
                       </p>
-
-                      <div className="flex flex-wrap gap-2 pt-2">
-                        {cap.tools.map((tool) => (
-                          <span 
-                            key={tool}
-                            className="font-mono text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10 text-white/80"
-                          >
-                            {tool}
-                          </span>
-                        ))}
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -124,21 +113,29 @@ export const SocConsole: React.FC = () => {
           </div>
         </div>
 
-        {/* Tool Stream Marquee / Ticker */}
-        <div className="mt-10">
+        {/* Tech Stack Stream */}
+        <div className="mt-12">
           <div className="font-mono text-xs uppercase tracking-widest text-[#9a9894] mb-4 flex items-center gap-2">
             <Terminal size={14} className="text-[#ff4d00]" />
-            <span>OPERATIONAL ARSENAL &amp; ENVIRONMENT STACK</span>
+            <span>TECH I REGULARLY USE</span>
           </div>
 
-          <div className="flex flex-wrap gap-2.5">
-            {socArsenal.toolStream.map((tool) => (
-              <span 
-                key={tool}
-                className="px-4 py-2 rounded border border-white/15 bg-white/[0.02] font-mono text-xs tracking-wider uppercase text-white/90 hover:bg-[#ff4d00] hover:text-black hover:border-[#ff4d00] hover:-translate-y-1 transition-all duration-200 cursor-default"
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-3">
+            {about.techStack.map((tech) => (
+              <div 
+                key={tech.name}
+                className="p-3.5 rounded border border-white/10 bg-[#090b10] flex flex-col items-center justify-center gap-2 hover:border-[#ff4d00]/50 hover:bg-[#ff4d00]/[0.04] transition-all group"
               >
-                {tool}
-              </span>
+                <img 
+                  src={tech.icon} 
+                  alt={tech.name} 
+                  className="w-7 h-7 object-contain group-hover:scale-110 transition-transform"
+                  loading="lazy"
+                />
+                <span className="font-mono text-[11px] text-white/80 group-hover:text-white">
+                  {tech.name}
+                </span>
+              </div>
             ))}
           </div>
         </div>

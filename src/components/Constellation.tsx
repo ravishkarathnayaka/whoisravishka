@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Share2, Sparkles, Terminal } from 'lucide-react';
-import { portfolioData, SkillNode } from '../data/portfolioData';
+import { portfolioData } from '../data/portfolioData';
 
 export const Constellation: React.FC = () => {
   const { constellation } = portfolioData;
@@ -8,7 +8,6 @@ export const Constellation: React.FC = () => {
 
   const selectedNode = constellation.find(n => n.id === selectedNodeId) || constellation[0];
 
-  // Helper to find node coordinates
   const getNodeById = (id: string) => constellation.find(n => n.id === id);
 
   return (
@@ -27,7 +26,7 @@ export const Constellation: React.FC = () => {
             </h2>
           </div>
           <p className="text-[#9a9894] text-sm max-w-sm font-sans leading-relaxed">
-            Select an operational domain node to inspect its interconnected systems, tooling architecture, and real-world implementation.
+            Select an operational node to reveal how cybersecurity, DevOps pipelines, MLOps, software engineering, and creative media intersect in Ravishka's work.
           </p>
         </div>
 
@@ -99,7 +98,7 @@ export const Constellation: React.FC = () => {
             <div className="flex items-center justify-between font-mono text-[10px] text-[#ff4d00] uppercase tracking-widest mb-2">
               <span className="flex items-center gap-1.5">
                 <Sparkles size={12} />
-                <span>ACTIVE DOMAIN INSPECTION</span>
+                <span>DOMAIN INSPECTION</span>
               </span>
               <span>{selectedNode.category}</span>
             </div>

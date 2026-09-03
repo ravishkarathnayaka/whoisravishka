@@ -19,34 +19,34 @@ export const Hero: React.FC = () => {
 
       {/* Floating Telemetry Widgets (Desktop) */}
       <div className="hidden md:flex absolute top-36 right-12 z-20 flex-col gap-4 font-mono text-[11px] tracking-wider pointer-events-none">
-        {/* Telemetry 1 */}
+        {/* Telemetry 1: DevSecOps */}
         <div className="flex items-center gap-3 px-4 py-2 rounded border border-white/10 bg-[#060709]/80 backdrop-blur-md">
           <ShieldCheck size={14} className="text-[#ff4d00]" />
           <div>
-            <span className="text-[#9a9894] block text-[9px] uppercase tracking-widest">Defensive Posture</span>
+            <span className="text-[#9a9894] block text-[9px] uppercase tracking-widest">Active Focus</span>
             <strong className="text-white font-normal">{profile.telemetry.posture}</strong>
           </div>
           <span className="w-1.5 h-1.5 rounded-full bg-[#00f59b] animate-ping ml-2" />
         </div>
 
-        {/* Telemetry 2 */}
+        {/* Telemetry 2: Status */}
         <div className="flex items-center gap-3 px-4 py-2 rounded border border-white/10 bg-[#060709]/80 backdrop-blur-md">
           <Activity size={14} className="text-[#00f59b]" />
           <div>
-            <span className="text-[#9a9894] block text-[9px] uppercase tracking-widest">Pipeline Health</span>
-            <strong className="text-white font-normal">{profile.telemetry.uptime}</strong>
+            <span className="text-[#9a9894] block text-[9px] uppercase tracking-widest">Current Status</span>
+            <strong className="text-white font-normal">{profile.telemetry.status}</strong>
           </div>
         </div>
 
-        {/* Telemetry 3: Terminal command */}
-        <div className="px-4 py-2.5 rounded border border-[#ff4d00]/30 bg-[#060709]/90 text-white/70 max-w-[280px]">
+        {/* Telemetry 3: Terminal Command */}
+        <div className="px-4 py-2.5 rounded border border-[#ff4d00]/30 bg-[#060709]/90 text-white/70 max-w-[290px]">
           <div className="flex items-center gap-2 text-[#ff4d00] text-[9px] mb-1">
             <Terminal size={10} />
-            <span>KUBERNETES / SENTINEL TELEMETRY</span>
+            <span>TERMINAL / DEV RUNTIME</span>
           </div>
           <code className="text-[10px] font-mono text-[#f4f1eb]/90 block">
-            trivy scan --severity CRITICAL<br/>
-            helm upgrade --atomic deploy
+            {profile.terminalHandle}<br/>
+            {profile.telemetry.shellCommand}
           </code>
         </div>
       </div>
@@ -56,7 +56,7 @@ export const Hero: React.FC = () => {
         <div className="flex items-center gap-4 font-mono text-xs uppercase tracking-widest text-[#9a9894]">
           <span className="text-[#ff4d00] font-bold">01</span>
           <span className="h-px w-8 bg-white/20" />
-          <span>CYBERSECURITY &amp; DEVOPS / SRI LANKA · {profile.coordinates}</span>
+          <span>CYBERSECURITY &amp; DEVOPS / SRI LANKA · {profile.location}</span>
         </div>
 
         {/* Main Giant Typographic Hero Title */}
@@ -74,20 +74,20 @@ export const Hero: React.FC = () => {
           <div className="mt-8 md:mt-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
             <div className="md:col-span-6 lg:col-span-5">
               <p className="font-serif italic text-xl md:text-2xl text-[#f4f1eb] leading-snug">
-                I engineer <span className="text-[#ff4d00] not-italic font-medium">calm</span> inside digital chaos—turning threat signals into resilient defenses and automated delivery.
+                {profile.tagline}
               </p>
             </div>
 
             <div className="md:col-span-4 lg:col-span-5 flex items-center gap-6">
               <a 
-                href="#work"
+                href="#projects"
                 className="group w-14 h-14 rounded-full border border-white/30 flex items-center justify-center text-white hover:border-[#ff4d00] hover:bg-[#ff4d00] hover:text-black transition-all duration-300"
-                aria-label="Explore selected operations"
+                aria-label="Explore selected projects"
               >
                 <ArrowDownRight size={22} className="group-hover:rotate-[-45deg] transition-transform duration-300" />
               </a>
               <div className="font-mono text-xs uppercase tracking-widest text-[#9a9894]">
-                <span>Explore Selected<br />Operations</span>
+                <span>Explore Selected<br />Projects</span>
               </div>
             </div>
 

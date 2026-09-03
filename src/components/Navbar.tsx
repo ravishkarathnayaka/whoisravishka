@@ -8,14 +8,14 @@ export const Navbar: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   const navLinks = [
-    { label: 'Manifesto', href: '#manifesto' },
-    { label: 'Arsenal', href: '#soc' },
-    { label: 'Live Intel', href: '#intel' },
+    { label: 'About', href: '#about' },
+    { label: 'Capabilities', href: '#capabilities' },
     { label: 'Constellation', href: '#constellation' },
-    { label: 'Work', href: '#work' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Experience', href: '#experience' },
     { label: 'Credentials', href: '#credentials' },
-    { label: 'Journey', href: '#journey' },
     { label: 'Community', href: '#community' },
+    { label: 'Writing', href: '#writing' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -23,7 +23,6 @@ export const Navbar: React.FC = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
 
-      // Simple active link detection
       const sections = navLinks.map(link => link.href.substring(1));
       for (const section of sections.reverse()) {
         const el = document.getElementById(section);

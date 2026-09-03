@@ -1,12 +1,12 @@
 import React from 'react';
-import { Clock, Briefcase, GraduationCap, ArrowUpRight } from 'lucide-react';
+import { Clock, Briefcase, GraduationCap } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export const JourneyTimeline: React.FC = () => {
   const { timeline } = portfolioData;
 
   return (
-    <section id="journey" className="py-28 bg-[#06070a] border-b border-white/10 relative">
+    <section id="experience" className="py-28 bg-[#06070a] border-b border-white/10 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
@@ -16,12 +16,12 @@ export const JourneyTimeline: React.FC = () => {
               <span>// Chronological Field Log</span>
             </div>
             <h2 className="font-serif text-4xl sm:text-6xl font-medium tracking-tight text-white leading-tight">
-              EXPERIENCE IN<br />
-              <i className="text-[#ff4d00] not-italic italic font-normal">MOTION.</i>
+              WHERE I'VE WORKED &amp;<br />
+              <i className="text-[#ff4d00] not-italic italic font-normal">STUDIED.</i>
             </h2>
           </div>
           <p className="text-[#9a9894] text-sm max-w-sm font-sans leading-relaxed">
-            Professional roles, enterprise support operations, academic achievements, and technical specializations.
+            Professional roles at Metadew Technologies, freelance full-stack client solutions, and academic track record at SLTC &amp; ICET.
           </p>
         </div>
 
