@@ -60,7 +60,7 @@ export const Manifesto: React.FC = () => {
           {/* Identity Story & Social Links */}
           <div className="lg:col-span-7 space-y-6">
             <div className="font-mono text-xs tracking-widest uppercase text-[#ff4d00]">
-              CYBERSECURITY &amp; DEVOPS ENTHUSIAST · VIDEOGRAPHER
+              CYBERSECURITY UNDERGRADUATE · PASSIONATE ABOUT SECURITY &amp; AI
             </div>
 
             <h3 className="font-serif text-3xl sm:text-5xl font-medium text-white tracking-tight">
@@ -68,7 +68,7 @@ export const Manifesto: React.FC = () => {
             </h3>
 
             <p className="text-[#9a9894] text-base leading-relaxed max-w-xl">
-              Undergraduate at Sri Lanka Technology Campus (SLTC) reading for BSc (Hons) in Cyber Security. Passionate about automated cloud systems, MLOps, open-source development, and visual storytelling.
+              Undergraduate at Sri Lanka Technology Campus (SLTC) reading for BSc (Hons) in Cyber Security. Passionate about security, artificial intelligence, and building impactful digital solutions.
             </p>
 
             <div className="font-mono text-xs text-[#9a9894] tracking-wider py-2">

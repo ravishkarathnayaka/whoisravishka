@@ -111,7 +111,7 @@ export const portfolioData = {
     eyebrow: "// Who I Am",
     displayTitle: "BUILDING INTELLIGENT",
     displayTitleItalic: "EXPERIENCES THAT MATTER.",
-    lead: "I'm a Cybersecurity undergraduate with a passion for MLOps, DevOps, and videography. I enjoy solving real-world problems through code and building impactful solutions that improve people's lives.",
+    lead: "I'm a Cybersecurity undergraduate with a passion for Security and Artificial Intelligence. I enjoy solving real-world problems through code and building impactful solutions that improve people's lives.",
     body1: "As Chairman of the IEEE Computer Society Student Branch Chapter of SLTC, Founding Chair of CloudSpace v1.0, and Chair of Codemania V6.0 Datathon, I bridge technical engineering with community leadership. With hands-on experience in Python, TypeScript, and Azure, I build resilient systems that protect software supply chains and scale cloud workloads.",
     body2: "Outside of engineering and community mentorship, I am an active videographer and media director. I explore research, contribute to open-source software, and create content that turns technical complexity into compelling visual narratives.",
     whatIDo: [
