@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orange: #ff4d00;
+  --ember: #ff7137;
+  --ink: #060709;
+  --paper: #f4f1eb;
+  --muted: #9a9894;
+  --line: rgba(255, 255, 255, 0.12);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #060709;
+}
+::-webkit-scrollbar-thumb {
+  background: #222530;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4d00;
+}
+
+/* Noise overlay */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+}
+
+/* Typography stroke for outline hero name */
+.text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.75);
+}
+.text-stroke-orange {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #ff4d00;
+}
+
+/* Clipped polygon portrait frame */
+.portrait-polygon {
+  clip-path: polygon(0 0, 92% 0, 100% 8%, 100% 100%, 8% 100%, 0 92%);
+}
+
+.portrait-polygon-inner {
+  clip-path: polygon(0 0, 89% 0, 100% 11%, 100% 100%, 11% 100%, 0 89%);
+}
+
+/* Subtle tech grid background */
+.tech-grid-bg {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Radar rings */
+.radar-grid {
+  background: repeating-radial-gradient(
+    circle,
+    transparent 0 19%,
+    rgba(255, 77, 0, 0.2) 19.5% 20%,
+    transparent 20.5% 39%
+  );
+}
+
+/* Keyframe animations */
+@keyframes radarSweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes laserScan {
+  0%, 10% { top: -2%; opacity: 0; }
+  25% { opacity: 0.85; }
+  80% { top: 102%; opacity: 0.65; }
+  100% { top: 102%; opacity: 0; }
+}
+
+@keyframes orbitSpin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes orbitSpinRev {
+  to { transform: translate(-50%, -50%) rotate(-360deg); }
+}
+
+.animate-radar-sweep {
+  animation: radarSweep 3.6s linear infinite;
+}
+
+.animate-laser-scan {
+  animation: laserScan 4.5s ease-in-out infinite;
+}
+
+.animate-orbit-1 {
+  animation: orbitSpin 14s linear infinite;
+}
+
+.animate-orbit-2 {
+  animation: orbitSpinRev 20s linear infinite;
+}
+
+/* Glass panel */
+.glass-panel {
+  background: rgba(12, 13, 20, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-orange {
+  background: rgba(12, 13, 20, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 77, 0, 0.35);
+  box-shadow: 0 0 50px rgba(255, 77, 0, 0.08);
+}
