@@ -91,7 +91,7 @@ export const ProjectsArchive: React.FC = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover grayscale contrast-110 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 ease-out"
+                    className="w-full h-full object-cover object-top brightness-95 contrast-105 group-hover:brightness-105 group-hover:scale-105 transition-all duration-500 ease-out"
                   />
                   <div className="absolute top-3 left-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md border border-white/10 font-mono text-[9px] uppercase tracking-wider text-[#ff4d00]">
                     {project.categoryLabel}
