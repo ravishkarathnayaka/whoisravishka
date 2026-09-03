@@ -12,8 +12,7 @@ export const ProjectsArchive: React.FC = () => {
     { key: 'all', label: 'ALL PROJECTS' },
     { key: 'cybersecurity', label: 'CYBERSECURITY & SOAR' },
     { key: 'devops', label: 'DEVOPS & CLOUD' },
-    { key: 'fullstack', label: 'FULL-STACK & APPS' },
-    { key: 'media', label: 'MEDIA & CREATIVE' }
+    { key: 'fullstack', label: 'FULL-STACK & APPS' }
   ];
 
   const filteredProjects = activeCategory === 'all'
@@ -43,7 +42,7 @@ export const ProjectsArchive: React.FC = () => {
         {/* Project Command Strip */}
         <div className="grid grid-cols-2 md:grid-cols-4 border border-white/15 bg-black/50 p-6 rounded-t-xl divide-y md:divide-y-0 md:divide-x divide-white/10 font-mono">
           <div className="p-3">
-            <strong className="text-3xl text-white font-serif block">08</strong>
+            <strong className="text-3xl text-white font-serif block">05</strong>
             <span className="text-[10px] text-[#9a9894] uppercase tracking-widest">Documented Builds</span>
           </div>
           <div className="p-3">

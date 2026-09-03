@@ -260,11 +260,11 @@ export const portfolioData = {
       categoryLabel: "DevSecOps & Supply Chain Security",
       description: "Automated SLSA Level 3 DevSecOps pipeline with SBOM generation, Cosign cryptographic signing, and Kyverno Kubernetes admission control.",
       longDescription: "A production-grade, zero-cost reference implementation of an automated, end-to-end secure software supply chain pipeline. Complete alignment with the Supply-chain Levels for Software Artifacts (SLSA) v1.0 Level 3 specification, automated SBOM generation (SPDX/CycloneDX), keyless cryptographic signing via Sigstore / Cosign, Google Distroless container hardening, Semgrep SAST, Gitleaks secrets detection, Trivy container auditing, and Kyverno policy-based admission control in Kubernetes.",
-      image: "/assets/projects/slsa-pipeline-ui.jpg",
+      image: "/assets/projects/slsa-pipeline-real.png",
       tags: ["Shell", "SLSA Level 3", "Cosign", "Kyverno", "Kubernetes", "Trivy", "Semgrep", "Gitleaks"],
       metrics: "SLSA Level 3 Compliant · Zero CVEs Deployed",
       github: "https://github.com/ravishkarathnayaka/Enterprise-Software-Supply-Chain-Security-SLSA-Level-3-Pipeline.",
-      live: "https://github.com/ravishkarathnayaka/Enterprise-Software-Supply-Chain-Security-SLSA-Level-3-Pipeline.",
+      live: "https://ravishkarathnayaka.github.io/Enterprise-Software-Supply-Chain-Security-SLSA-Level-3-Pipeline./",
       highlights: [
         "Cryptographic artifact signing via Sigstore / Cosign keyless OIDC workflow",
         "Automated Software Bill of Materials (SBOM) generation adhering to SPDX format",
@@ -279,11 +279,11 @@ export const portfolioData = {
       categoryLabel: "Cloud Security & SOAR",
       description: "Production-grade, modular multi-cloud threat detection and serverless SOAR pipeline with LocalStack and AWS support.",
       longDescription: "An open-source, production-grade security engineering system delivering automated threat detection and real-time incident response (SOAR) across multi-cloud environments. Engineered for zero-cost local development using LocalStack and Docker containers, with 100% architectural parity with live AWS environments. Includes automated event ingestion, threat enrichment, containment playbooks, and Terraform IaC provisioning.",
-      image: "/assets/projects/multi-cloud-soar-ui.jpg",
+      image: "/assets/projects/multi-cloud-soar-real.png",
       tags: ["Python 3.11", "AWS", "Terraform", "SOAR", "LocalStack", "Docker", "CI/CD"],
       metrics: "86% Test Coverage · 100% AWS Parity",
       github: "https://github.com/ravishkarathnayaka/Multi-Cloud-Automated-Threat-Detection-SOAR-Pipeline-",
-      live: "https://github.com/ravishkarathnayaka/Multi-Cloud-Automated-Threat-Detection-SOAR-Pipeline-",
+      live: "https://multi-cloud-automated-threat-detect-woad.vercel.app",
       highlights: [
         "Modular serverless incident response playbooks provisioned through Terraform",
         "LocalStack emulation for zero-cloud-cost test and security simulation",
@@ -298,11 +298,11 @@ export const portfolioData = {
       categoryLabel: "Enterprise Software & AI",
       description: "AI-assisted driving academy management & DMT practical trial readiness system engineered for Sri Lankan driving schools.",
       longDescription: "A specialized, production-ready enterprise management platform tailored specifically to the operational, legal, and educational requirements of Sri Lankan Driving Schools under the Motor Traffic Act No. 14 of 1951. Digitizes the student lifecycle: registration, NTMI medical verification, 6-month DMT permit countdown, practical lesson tracking, and AI-driven trial readiness assessment with print-ready official forms.",
-      image: "/assets/projects/trialready-ui.jpg",
+      image: "/assets/projects/trialready-login-real.png",
       tags: ["TypeScript 5", "React 19", "Tailwind CSS 4", "Supabase", "PostgreSQL", "Vitest"],
       metrics: "36 Passed Tests · Legal Compliance (Act No. 14 of 1951)",
       github: "https://github.com/ravishkarathnayaka/TrialReady-LK",
-      live: "https://github.com/ravishkarathnayaka/TrialReady-LK",
+      live: "https://trial-ready-lk-pi.vercel.app",
       highlights: [
         "AI-driven practical trial readiness evaluation and mistake pattern detection",
         "Automated 6-month Department of Motor Traffic (DMT) learner permit timer",
@@ -346,63 +346,6 @@ export const portfolioData = {
         "Implementation of custom communication protocol frames and handshakes",
         "Encrypted data streams preventing plaintext eavesdropping on the local network",
         "Room-based message routing and automated client disconnection handling"
-      ]
-    },
-    {
-      id: "cloudspace-platform",
-      title: "CloudSpace v1.0 Conference & Registration Infrastructure",
-      category: "devops",
-      categoryLabel: "Cloud Computing & Community",
-      description: "Sri Lanka's largest student cloud computing event platform and attendee verification system.",
-      longDescription: "As Founding Chairperson of CloudSpace v1.0, led the initiative and built the official web and registration platform for Sri Lanka's largest student cloud computing event and SLTC's first-ever cloud initiative.",
-      image: "/assets/projects/cloudspace-ui.jpg",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Azure", "Cloud Architecture"],
-      metrics: "500+ Registered Attendees · SLTC's First Cloud Initiative",
-      github: "https://github.com/ravishkarathnayaka",
-      live: "https://ieee.lk/",
-      highlights: [
-        "Architected scalable registration engine handling peak concurrent student traffic",
-        "Founded Sri Lanka's largest university cloud computing initiative",
-        "Automated digital confirmation and check-in workflows for conference attendees",
-        "Coordinated with industry sponsors, keynote speakers, and national tech bodies"
-      ]
-    },
-    {
-      id: "codemania-datathon-platform",
-      title: "Codemania V6.0 Datathon Platform & Real-Time Leaderboard",
-      category: "fullstack",
-      categoryLabel: "Datathon Engine & Security",
-      description: "Real-time evaluation engine and live leaderboard for Sri Lanka's largest inter-university Datathon.",
-      longDescription: "Led Codemania V6.0 as Chairperson and spearheaded the submission platform. Teams submitted machine learning prediction models evaluated live against ground-truth datasets with container sandboxing.",
-      image: "/assets/projects/codemania-ui.jpg",
-      tags: ["Python", "FastAPI", "Docker", "Redis", "Datathon Engine"],
-      metrics: "30+ Inter-University Teams · Live Scoring",
-      github: "https://github.com/ravishkarathnayaka",
-      live: "https://github.com/ravishkarathnayaka",
-      highlights: [
-        "Dockerized evaluation sandboxes to securely execute student submissions",
-        "Real-time scoring engine with Redis broadcast",
-        "Organized Sri Lanka's largest university Datathon and SLTC's first-ever datathon",
-        "Over 30 university teams competing across complex data science challenges"
-      ]
-    },
-    {
-      id: "cinevision-productions",
-      title: "CineVision & Visual Storytelling Media Productions",
-      category: "media",
-      categoryLabel: "Videography & Creative Media",
-      description: "Cinematic commercial videos, event recap documentaries, and technical community media reels.",
-      longDescription: "Bringing technical achievements and university summits to life through high-end cinematography. Created captivating teaser trailers, after-movies, and recap documentaries for IEEE, CloudSpace, and Codemania.",
-      image: "/assets/projects/cinevision-ui.jpg",
-      tags: ["Videography", "DaVinci Resolve", "Premiere Pro", "Color Grading"],
-      metrics: "20+ Produced Films · Commercial & Event Media",
-      github: "https://www.instagram.com/ravishka._/",
-      live: "https://www.instagram.com/ravishka._/",
-      highlights: [
-        "Official cinematographer and media lead for major university conferences",
-        "Color grading in DaVinci Resolve utilizing cinematic film profiles",
-        "Capturing energy, human stories, and technical excellence through the lens",
-        "Full post-production pipeline: sound design, pacing, and visual effects"
       ]
     }
   ] as Project[],
