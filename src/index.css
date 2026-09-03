@@ -184,16 +184,15 @@
   width: 94%;
   font: 500 clamp(4.8rem, 13vw, 12rem)/0.69 'Playfair Display', serif;
   letter-spacing: -0.075em;
-  pointer-events: auto;
-  cursor: pointer;
+  pointer-events: none;
   overflow: visible;
   line-height: 0.76;
   user-select: none;
+  will-change: margin-left;
 }
 
 .hero-name-exact span {
   display: block;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s cubic-bezier(0.16, 1, 0.3, 1), -webkit-text-stroke 0.4s ease;
 }
 
 .hero-name-exact .solid {
@@ -207,19 +206,7 @@
   margin-top: -0.06em;
 }
 
-/* Hover Interaction on Name: Kinetic slide & orange laser glow */
-.hero-name-exact:hover .solid {
-  transform: translateX(-12px);
-  filter: drop-shadow(0 0 35px rgba(255, 255, 255, 0.55));
-}
-
-.hero-name-exact:hover .outline {
-  transform: translateX(16px);
-  -webkit-text-stroke: 1.5px #ff4d00;
-  filter: drop-shadow(0 0 35px rgba(255, 77, 0, 0.75));
-}
-
-/* 3D Cyber Art: Exact mix-blend-mode: screen to eliminate black background + interactive hover */
+/* 3D Cyber Art: Exact mix-blend-mode: screen to eliminate black background + GPU composite */
 .hero-art-exact {
   position: absolute;
   z-index: 2;
@@ -230,24 +217,14 @@
   transform: translateX(-39%);
   mix-blend-mode: screen;
   filter: contrast(1.08);
-  pointer-events: auto;
-  cursor: pointer;
-  transition: filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-art-exact:hover {
-  filter: contrast(1.22) brightness(1.15) drop-shadow(0 0 45px rgba(255, 77, 0, 0.45));
+  pointer-events: none;
+  will-change: translate;
 }
 
 .hero-art-exact img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-art-exact:hover img {
-  transform: scale(1.04) translateY(-8px);
 }
 
 .hero-copy-exact {

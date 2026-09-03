@@ -6,48 +6,48 @@ export const Hero: React.FC = () => {
   const heroNameRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
-    let pointerX = 0;
-    let pointerY = 0;
-    let framePending = false;
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let animationFrameId: number;
 
-    const paintMotion = () => {
+    const lerp = (start: number, end: number, factor: number) => {
+      return start + (end - start) * factor;
+    };
+
+    const updateMotion = () => {
+      // Butter-smooth linear interpolation (LERP factor 0.08)
+      currentX = lerp(currentX, targetX, 0.08);
+      currentY = lerp(currentY, targetY, 0.08);
+
       const scrollY = window.scrollY;
       if (scrollY < window.innerHeight && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         if (heroArtRef.current) {
-          // Dynamic depth parallax for 3D cybernetic figure
-          heroArtRef.current.style.transform = `translateX(-39%) translate3d(${pointerX * 26}px, ${scrollY * 0.08 + pointerY * 18}px, 0)`;
+          // Hardware-accelerated GPU translate property (exact whoislsam physics)
+          heroArtRef.current.style.translate = `${currentX * 14}px ${scrollY * 0.08 + currentY * 10}px`;
         }
         if (heroNameRef.current) {
-          // Counter-parallax on giant typographic name
-          heroNameRef.current.style.transform = `translateY(-50%) translate3d(${pointerX * -14}px, ${pointerY * -8}px, 0)`;
+          // Counter-motion on giant typographic name
+          heroNameRef.current.style.marginLeft = `${currentX * -9}px`;
         }
       }
-      framePending = false;
-    };
 
-    const requestPaint = () => {
-      if (!framePending) {
-        requestAnimationFrame(paintMotion);
-        framePending = true;
-      }
+      animationFrameId = requestAnimationFrame(updateMotion);
     };
 
     const handlePointerMove = (e: PointerEvent) => {
-      pointerX = e.clientX / window.innerWidth - 0.5;
-      pointerY = e.clientY / window.innerHeight - 0.5;
-      requestPaint();
-    };
-
-    const handleScroll = () => {
-      requestPaint();
+      // Normalized between -0.5 and 0.5
+      targetX = e.clientX / window.innerWidth - 0.5;
+      targetY = e.clientY / window.innerHeight - 0.5;
     };
 
     window.addEventListener('pointermove', handlePointerMove, { passive: true });
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    animationFrameId = requestAnimationFrame(updateMotion);
 
     return () => {
       window.removeEventListener('pointermove', handlePointerMove);
-      window.removeEventListener('scroll', handleScroll);
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
