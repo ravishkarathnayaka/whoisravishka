@@ -64,7 +64,7 @@ export const Hero: React.FC = () => {
       {/* Identity Role (Bottom Left on Orange) */}
       <div className="hero-role-exact">
         Cybersecurity Undergraduate<br />
-        <span>&amp; MLOps / DevOps Enthusiast</span>
+        <span>Passionate about Security &amp; AI</span>
         <small>
           Public identity: Ravishka Rathnayaka · Chairman — IEEE Computer Society of SLTC
         </small>

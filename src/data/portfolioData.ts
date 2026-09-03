@@ -76,7 +76,7 @@ export const portfolioData = {
     shortName: "Ravishka",
     terminalHandle: "$ ravishkadev|",
     role: "Cybersecurity Undergraduate",
-    secondaryRole: "MLOps & DevOps Enthusiast · Videographer",
+    secondaryRole: "Passionate about Security & AI · Videographer",
     primaryLeadership: "Chairman — IEEE Computer Society of SLTC",
     tagline: "Securing systems, automating pipelines, and capturing stories through the lens.",
     email: "contact.ravishkarathnayaka@gmail.com",
