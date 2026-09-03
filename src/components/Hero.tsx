@@ -1,11 +1,58 @@
-import React from 'react';
-import { portfolioData } from '../data/portfolioData';
+import React, { useEffect, useRef } from 'react';
 
 export const Hero: React.FC = () => {
-  const { profile } = portfolioData;
+  const heroRef = useRef<HTMLElement>(null);
+  const heroArtRef = useRef<HTMLDivElement>(null);
+  const heroNameRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    let pointerX = 0;
+    let pointerY = 0;
+    let framePending = false;
+
+    const paintMotion = () => {
+      const scrollY = window.scrollY;
+      if (scrollY < window.innerHeight && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        if (heroArtRef.current) {
+          // Dynamic depth parallax for 3D cybernetic figure
+          heroArtRef.current.style.transform = `translateX(-39%) translate3d(${pointerX * 26}px, ${scrollY * 0.08 + pointerY * 18}px, 0)`;
+        }
+        if (heroNameRef.current) {
+          // Counter-parallax on giant typographic name
+          heroNameRef.current.style.transform = `translateY(-50%) translate3d(${pointerX * -14}px, ${pointerY * -8}px, 0)`;
+        }
+      }
+      framePending = false;
+    };
+
+    const requestPaint = () => {
+      if (!framePending) {
+        requestAnimationFrame(paintMotion);
+        framePending = true;
+      }
+    };
+
+    const handlePointerMove = (e: PointerEvent) => {
+      pointerX = e.clientX / window.innerWidth - 0.5;
+      pointerY = e.clientY / window.innerHeight - 0.5;
+      requestPaint();
+    };
+
+    const handleScroll = () => {
+      requestPaint();
+    };
+
+    window.addEventListener('pointermove', handlePointerMove, { passive: true });
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('pointermove', handlePointerMove);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <section className="hero-exact" id="home">
+    <section ref={heroRef} className="hero-exact" id="home">
       {/* Exact whoislsam Orbital Rings */}
       <div className="hero-orbit-exact orbit-one-exact" aria-hidden="true" />
       <div className="hero-orbit-exact orbit-two-exact" aria-hidden="true" />
@@ -37,14 +84,14 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Exact Giant Typographic Display Name */}
-      <h1 className="hero-name-exact" aria-label="Ravishka Rathnayaka">
+      {/* Exact Giant Typographic Display Name with Hover Kinetic Separation */}
+      <h1 ref={heroNameRef} className="hero-name-exact" aria-label="Ravishka Rathnayaka">
         <span className="solid">RAVISHKA</span>
         <span className="outline">RATHNAYAKA</span>
       </h1>
 
-      {/* Center 3D Cyber Art (Exact mix-blend-mode: screen to eliminate any black box!) */}
-      <div className="hero-art-exact" aria-hidden="true">
+      {/* Center 3D Cyber Art with Mouse Parallax & Hover Glow */}
+      <div ref={heroArtRef} className="hero-art-exact" aria-hidden="true">
         <img 
           src="/assets/cyber-oracle.png" 
           alt="Abstract black chrome cybernetic figure dissolving into orange data particles" 
