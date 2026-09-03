@@ -5,11 +5,11 @@
 :root {
   --orange: #ff4d00;
   --ember: #ff7137;
-  --ink: #060709;
-  --paper: #f4f1eb;
+  --ink: #080808;
+  --paper: #f2efe9;
   --muted: #9a9894;
-  --line: rgba(255, 255, 255, 0.12);
-  --pad: clamp(1.2rem, 3.5vw, 3.5rem);
+  --line: rgba(255, 255, 255, 0.13);
+  --pad: clamp(1.25rem, 5vw, 5.5rem);
 }
 
 /* Custom Scrollbar */
@@ -38,14 +38,353 @@
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.95' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
 }
 
-/* Typography stroke for outline hero name */
-.text-stroke {
-  color: transparent;
-  -webkit-text-stroke: 1.2px #ffffff;
+/* TOPBAR: Exact whoislsam */
+.topbar-exact {
+  height: 82px;
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--pad);
+  background: linear-gradient(120deg, rgba(255, 77, 0, 0.94) 0 48%, rgba(8, 8, 8, 0.92) 48%);
+  backdrop-filter: blur(18px) saturate(1.15);
+  -webkit-backdrop-filter: blur(18px) saturate(1.15);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition: height 0.3s, background 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
-.text-stroke-orange {
+
+.topbar-exact.scrolled {
+  height: 68px;
+  background: rgba(7, 7, 7, 0.95);
+  border-bottom: 1px solid rgba(255, 77, 0, 0.32);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28), inset 0 -1px rgba(255, 77, 0, 0.1);
+}
+
+.wordmark-exact {
+  display: inline-flex;
+  align-items: center;
+  text-transform: lowercase;
+  letter-spacing: -0.065em;
+  font-weight: 500;
+  white-space: nowrap;
+  font-family: 'DM Mono', monospace;
+  font-size: 1.15rem;
+}
+
+.wm-command-exact {
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: -0.08em;
+}
+
+.wm-target-exact {
+  margin-left: 0.1em;
+  padding: 0.22em 0.38em 0.25em;
+  font-weight: 500;
+  letter-spacing: -0.08em;
+  clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
+  background: #080808;
+  color: #fff;
+  transition: background 0.25s, color 0.25s;
+}
+
+.wordmark-exact:hover .wm-target-exact {
+  background: #fff !important;
+  color: #080808 !important;
+}
+
+.wordmark-cursor {
+  width: 3px;
+  height: 0.88em;
+  margin-left: 0.25em;
+  background: #260900;
+  animation: wordmarkCursor 1.05s steps(1) infinite;
+}
+
+@keyframes wordmarkCursor {
+  50% { opacity: 0; }
+}
+
+.availability-exact {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font: 400 0.58rem 'DM Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #fff;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  transition: color 0.25s, border-color 0.25s, background 0.25s;
+}
+
+.availability-exact:hover {
+  color: var(--orange);
+  border-color: var(--orange);
+  background: #000;
+}
+
+.availability-exact i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00f59b;
+  box-shadow: 0 0 10px #00f59b;
+  animation: pulseDot 1.6s infinite;
+}
+
+@keyframes pulseDot {
+  50% { opacity: 0.35; box-shadow: 0 0 4px #00f59b; }
+}
+
+/* HERO: Exact whoislsam */
+.hero-exact {
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 68% 44%, #311006 0%, transparent 27%), linear-gradient(120deg, var(--orange) 0 48%, #0a0a0a 48%);
+  padding: 120px var(--pad) 3rem;
+}
+
+.hero-exact::after {
+  content: "";
+  position: absolute;
+  left: 48%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.16);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-kicker-exact {
+  position: absolute;
+  top: 110px;
+  left: var(--pad);
+  font: 400 0.65rem 'DM Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  z-index: 5;
+  color: #fff;
+}
+
+.hero-name-exact {
+  position: absolute;
+  z-index: 3;
+  left: 3.5vw;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 94%;
+  font: 500 clamp(4.8rem, 13vw, 12rem)/0.69 'Playfair Display', serif;
+  letter-spacing: -0.075em;
+  pointer-events: none;
+  overflow: visible;
+  line-height: 0.76;
+}
+
+.hero-name-exact span {
+  display: block;
+}
+
+.hero-name-exact .solid {
+  color: #fff;
+}
+
+.hero-name-exact .outline {
+  margin-left: 14%;
   color: transparent;
-  -webkit-text-stroke: 1.2px #ff4d00;
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.85);
+  margin-top: -0.06em;
+}
+
+/* 3D Cyber Art: Exact mix-blend-mode: screen to eliminate black background! */
+.hero-art-exact {
+  position: absolute;
+  z-index: 2;
+  width: min(52vw, 780px);
+  height: 87%;
+  bottom: -5%;
+  left: 48%;
+  transform: translateX(-39%);
+  mix-blend-mode: screen;
+  filter: contrast(1.08);
+  pointer-events: none;
+}
+
+.hero-art-exact img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-copy-exact {
+  position: absolute;
+  z-index: 5;
+  width: min(320px, 28vw);
+  right: var(--pad);
+  top: 24%;
+  font: 500 clamp(1rem, 1.5vw, 1.35rem)/1.45 'Playfair Display', serif;
+  color: #f2efe9;
+}
+
+.hero-copy-exact em {
+  color: var(--orange);
+  font-style: italic;
+}
+
+.round-link-exact {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  font-size: 1.4rem;
+  margin-top: 1.6rem;
+  transition: 0.3s;
+  color: #fff;
+  text-decoration: none;
+}
+
+.round-link-exact:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: #080808;
+  transform: rotate(-45deg);
+}
+
+.hero-role-exact {
+  position: absolute;
+  z-index: 4;
+  left: var(--pad);
+  bottom: 7%;
+  font: 500 clamp(1.35rem, 2.2vw, 2.25rem)/1.08 'Playfair Display', serif;
+  color: #fff;
+}
+
+.hero-role-exact span {
+  color: #250a00;
+}
+
+.hero-role-exact small {
+  display: block;
+  margin-top: 0.8rem;
+  font: 400 0.52rem/1.5 'DM Mono', monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(32, 8, 0, 0.75);
+}
+
+.scroll-note-exact {
+  position: absolute;
+  z-index: 4;
+  right: var(--pad);
+  bottom: 6%;
+  font: 400 0.62rem 'DM Mono', monospace;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.scroll-note-exact b {
+  font-size: 1rem;
+  margin-left: 0.8rem;
+  color: var(--orange);
+}
+
+/* Security Telemetry */
+.hero-telemetry-exact {
+  position: absolute;
+  z-index: 6;
+  font: 400 0.48rem 'DM Mono', monospace;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.65);
+  pointer-events: none;
+}
+
+.telemetry-a-exact {
+  right: 8%;
+  top: 15%;
+  padding-left: 1rem;
+  border-left: 1px solid var(--orange);
+}
+
+.telemetry-a-exact span {
+  display: block;
+  color: var(--orange);
+  margin-bottom: 0.35rem;
+}
+
+.telemetry-a-exact strong {
+  font-weight: 400;
+  color: #fff;
+}
+
+.telemetry-a-exact i {
+  display: inline-block;
+  width: 34px;
+  height: 3px;
+  margin-left: 0.5rem;
+  background: linear-gradient(90deg, var(--orange) 70%, #333 70%);
+}
+
+.telemetry-b-exact {
+  right: 4%;
+  top: 58%;
+  text-align: right;
+}
+
+.telemetry-b-exact span {
+  display: block;
+  color: var(--orange);
+  margin-bottom: 0.35rem;
+}
+
+.telemetry-b-exact strong {
+  font-weight: 400;
+  color: #fff;
+}
+
+.telemetry-b-exact small {
+  display: block;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+/* Orbital Rings */
+.hero-orbit-exact {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid rgba(255, 120, 55, 0.25);
+  border-radius: 50%;
+  left: 61%;
+  top: 49%;
+  transform: translate(-50%, -50%);
+  animation: orbitExact 9s linear infinite;
+}
+
+.orbit-one-exact {
+  width: 570px;
+  height: 190px;
+}
+
+.orbit-two-exact {
+  width: 760px;
+  height: 260px;
+  transform: translate(-50%, -50%) rotate(50deg);
+  animation-direction: reverse;
+  animation-duration: 13s;
+}
+
+@keyframes orbitExact {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 /* Clipped polygon portrait frame */
@@ -57,76 +396,10 @@
   clip-path: polygon(0 0, 89% 0, 100% 11%, 100% 100%, 11% 100%, 0 89%);
 }
 
-/* Diagonal 120deg split background exact to whoislsam */
-.hero-exact-split {
-  background: radial-gradient(circle at 68% 44%, #311006 0%, transparent 27%), linear-gradient(120deg, #ff4d00 0 48%, #0a0a0a 48%);
-}
-
-.hero-exact-split::after {
-  content: "";
-  position: absolute;
-  left: 48%;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: rgba(255, 255, 255, 0.16);
-  pointer-events: none;
-  z-index: 2;
-}
-
-/* Topbar 120deg split background */
-.topbar-exact-split {
-  background: linear-gradient(120deg, rgba(255, 77, 0, 0.95) 0 48%, rgba(8, 8, 8, 0.92) 48%);
-  backdrop-filter: blur(18px) saturate(1.15);
-  -webkit-backdrop-filter: blur(18px) saturate(1.15);
-}
-
-.topbar-scrolled-exact {
-  background: rgba(7, 7, 7, 0.95) !important;
-  border-bottom: 1px solid rgba(255, 77, 0, 0.32);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28), inset 0 -1px rgba(255, 77, 0, 0.1);
-}
-
-/* Clipped Wordmark target badge */
-.wm-target-badge {
-  clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
-}
-
-/* Round arrow link */
-.round-link-exact {
-  display: grid;
-  place-items: center;
-  width: 54px;
-  height: 54px;
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: 50%;
-  font-size: 1.4rem;
-  transition: all 0.3s ease;
-  color: #ffffff;
-}
-.round-link-exact:hover {
-  background: #ff4d00;
-  border-color: #ff4d00;
-  color: #000000;
-  transform: rotate(-45deg);
-}
-
-/* Subtle tech grid background */
-.tech-grid-bg {
-  background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 32px 32px;
-}
-
-/* Radar Sweep Animation */
+/* Radar & Marquee */
 @keyframes radarSweep {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .animate-radar-sweep {
@@ -134,43 +407,13 @@
   transform-origin: center center;
 }
 
-/* Laser Scanline for portrait */
 @keyframes laserScan {
-  0% {
-    top: 0%;
-    opacity: 0;
-  }
-  15% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  100% {
-    top: 100%;
-    opacity: 0;
-  }
+  0% { top: 0%; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
 }
 
 .animate-laser-scan {
   animation: laserScan 3s ease-in-out infinite;
-}
-
-/* Orbital Rings */
-@keyframes orbitSpin1 {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-@keyframes orbitSpin2 {
-  0% { transform: translate(-50%, -50%) rotate(45deg); }
-  100% { transform: translate(-50%, -50%) rotate(-315deg); }
-}
-
-.animate-orbit-1 {
-  animation: orbitSpin1 24s linear infinite;
-}
-
-.animate-orbit-2 {
-  animation: orbitSpin2 36s linear infinite;
 }

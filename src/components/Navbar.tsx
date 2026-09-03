@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export const Navbar: React.FC = () => {
@@ -38,76 +38,63 @@ export const Navbar: React.FC = () => {
 
   return (
     <header 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'topbar-scrolled-exact h-[68px] shadow-2xl' 
-          : 'topbar-exact-split h-[78px] border-b border-white/5'
-      }`}
+      className={`topbar-exact ${scrolled ? 'scrolled' : ''}`}
     >
-      <div className="max-w-[1440px] mx-auto h-full px-6 md:px-12 flex items-center justify-between">
-        {/* Exact whoislsam Wordmark */}
-        <a 
-          href="#home" 
-          className="group flex items-center font-mono text-base tracking-tight select-none shrink-0"
-        >
-          <span className="font-light tracking-tight text-white">whois</span>
-          <span className="wm-target-badge bg-[#080808] text-white px-2 py-0.5 text-xs font-semibold ml-1 group-hover:bg-white group-hover:text-black transition-colors">
-            ravishka
-          </span>
-          <i className="inline-block w-[3px] h-[0.9em] ml-1 bg-[#260900] group-hover:bg-white animate-pulse" />
-        </a>
+      {/* Exact whoislsam Wordmark */}
+      <a 
+        href="#home" 
+        className="wordmark-exact" 
+        aria-label="Who is Ravishka — Home"
+      >
+        <span className="wm-command-exact">whois</span>
+        <span className="wm-target-exact">ravishka</span>
+        <i className="wordmark-cursor" aria-hidden="true" />
+      </a>
 
-        {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-7 font-mono text-[11px] uppercase tracking-widest">
-          {navLinks.map((link) => {
-            const isActive = activeSection === link.href.substring(1);
-            return (
-              <a
-                key={link.label}
-                href={link.href}
-                className={`transition-colors py-1 relative ${
-                  isActive 
-                    ? 'text-white font-semibold' 
-                    : 'text-white/80 hover:text-white'
-                }`}
-              >
-                {link.label}
-                {isActive && (
-                  <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#ff4d00]" />
-                )}
-              </a>
-            );
-          })}
-        </nav>
+      {/* Desktop Navigation Links */}
+      <nav className="hidden lg:flex items-center gap-7 font-mono text-[11px] uppercase tracking-widest">
+        {navLinks.map((link) => {
+          const isActive = activeSection === link.href.substring(1);
+          return (
+            <a
+              key={link.label}
+              href={link.href}
+              className={`transition-colors py-1 relative ${
+                isActive 
+                  ? 'text-white font-semibold' 
+                  : 'text-white/80 hover:text-white'
+              }`}
+            >
+              {link.label}
+              {isActive && (
+                <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-[#ff4d00]" />
+              )}
+            </a>
+          );
+        })}
+      </nav>
 
-        {/* Availability Badge */}
-        <div className="hidden sm:flex items-center gap-4 shrink-0">
-          <a
-            href={`mailto:${portfolioData.profile.email}`}
-            className="group flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/20 bg-black/20 hover:border-[#ff4d00] hover:bg-black transition-all font-mono text-[10px] tracking-widest uppercase text-white"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00f59b] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00f59b]"></span>
-            </span>
-            <span>Available to connect</span>
-            <ArrowUpRight size={11} className="text-[#ff4d00] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </a>
-        </div>
+      {/* Exact whoislsam Availability Badge */}
+      <a 
+        href={`mailto:${portfolioData.profile.email}`} 
+        className="availability-exact hidden sm:flex"
+      >
+        <i aria-hidden="true" />
+        <span>Available to connect</span>
+      </a>
 
-        {/* Mobile Hamburger Button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 text-white border border-white/15 rounded bg-white/5 hover:border-[#ff4d00] transition-colors"
-          aria-label="Toggle navigation menu"
-        >
-          {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
-        </button>
-      </div>
+      {/* Mobile Hamburger Button */}
+      <button
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        className="lg:hidden p-2 text-white border border-white/15 rounded bg-white/5 hover:border-[#ff4d00] transition-colors"
+        aria-label="Toggle navigation menu"
+      >
+        {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
+      </button>
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#070707]/98 border-b border-white/10 backdrop-blur-xl px-6 py-6 animate-fadeIn">
+        <div className="lg:hidden absolute top-full left-0 w-full bg-[#080808]/98 border-b border-white/10 backdrop-blur-xl px-6 py-6 animate-fadeIn">
           <nav className="flex flex-col gap-3 font-mono text-xs uppercase tracking-wider">
             {navLinks.map((link) => (
               <a
