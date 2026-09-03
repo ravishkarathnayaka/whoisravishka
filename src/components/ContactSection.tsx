@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, Copy, Send, ArrowUpRight } from 'lucide-react';
+import { Check, Copy, Send, ArrowUpRight, ExternalLink } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 export const ContactSection: React.FC = () => {
@@ -15,13 +15,41 @@ export const ContactSection: React.FC = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    try {
+      // Direct form transmission to Ravishka's email inbox via FormSubmit.co AJAX endpoint
+      const response = await fetch(`https://formsubmit.co/ajax/${profile.email}`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || "Message from Portfolio",
+          message: formData.message,
+          _subject: `Portfolio Message from ${formData.name} - ${formData.subject}`,
+          _template: "table"
+        })
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        // Fallback: Open mailto client
+        window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`From: ${formData.name} (${formData.email})\n\n${formData.message}`)}`;
+        setSubmitted(true);
+      }
+    } catch {
+      window.location.href = `mailto:${profile.email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`From: ${formData.name} (${formData.email})\n\n${formData.message}`)}`;
       setSubmitted(true);
-    }, 1000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -51,8 +79,8 @@ export const ContactSection: React.FC = () => {
               Have a project in mind, need automated cloud pipelines, want to collaborate on AI systems, or produce event media? Feel free to reach out.
             </p>
 
-            {/* Interactive Email Bar with Copy Button */}
-            <div className="pt-2">
+            {/* Interactive Email Bar with Copy Button & Gmail Direct Web Link */}
+            <div className="pt-2 space-y-3">
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
                 <a
                   href={`mailto:${profile.email}`}
@@ -62,13 +90,27 @@ export const ContactSection: React.FC = () => {
                   <ArrowUpRight size={20} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </a>
 
-                <button
-                  onClick={handleCopyEmail}
-                  className="px-3 py-1.5 rounded-full bg-black/10 hover:bg-black hover:text-white border border-black/20 font-mono text-xs tracking-wider uppercase transition-all flex items-center gap-1.5"
-                >
-                  {copied ? <Check size={13} className="text-[#00f59b]" /> : <Copy size={13} />}
-                  <span>{copied ? 'Copied!' : 'Copy'}</span>
-                </button>
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={handleCopyEmail}
+                    className="px-3 py-1.5 rounded-full bg-black/10 hover:bg-black hover:text-white border border-black/20 font-mono text-xs tracking-wider uppercase transition-all flex items-center gap-1.5"
+                    title="Copy email to clipboard"
+                  >
+                    {copied ? <Check size={13} className="text-[#00f59b]" /> : <Copy size={13} />}
+                    <span>{copied ? 'Copied!' : 'Copy'}</span>
+                  </button>
+
+                  <a
+                    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}&su=Project%20Inquiry%20from%20Portfolio`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 rounded-full bg-black/10 hover:bg-black hover:text-white border border-black/20 font-mono text-xs tracking-wider uppercase transition-all flex items-center gap-1.5"
+                    title="Open directly in Gmail browser"
+                  >
+                    <ExternalLink size={13} />
+                    <span>Gmail Web</span>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -89,31 +131,35 @@ export const ContactSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Embedded Message Terminal Form */}
+          {/* Right Column: High-Tech Direct Terminal Form */}
           <div className="lg:col-span-6">
-            <div className="p-8 sm:p-10 rounded-2xl bg-black text-white border border-black shadow-2xl relative overflow-hidden">
+            <div className="bg-[#090b10] border border-white/15 rounded-xl p-8 sm:p-10 shadow-2xl relative overflow-hidden">
               <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-6 font-mono text-xs text-[#9a9894]">
                 <span className="flex items-center gap-2 text-white">
                   <span className="w-2 h-2 rounded-full bg-[#ff4d00]" />
                   <span>SEND A MESSAGE</span>
                 </span>
-                <span>DIRECT INBOX</span>
+                <span>DELIVERS TO GMAIL INBOX</span>
               </div>
 
               {submitted ? (
-                <div className="py-12 text-center space-y-4 animate-fadeIn">
-                  <div className="w-12 h-12 rounded-full border-2 border-[#00f59b] text-[#00f59b] flex items-center justify-center mx-auto mb-4">
+                <div className="py-10 text-center space-y-4 animate-fadeIn">
+                  <div className="w-12 h-12 rounded-full border-2 border-[#00f59b] text-[#00f59b] flex items-center justify-center mx-auto mb-3">
                     <Check size={24} />
                   </div>
                   <h3 className="font-serif text-2xl text-white font-medium">
-                    Message Sent
+                    Message Dispatched!
                   </h3>
-                  <p className="text-[#9a9894] text-xs max-w-xs mx-auto leading-relaxed font-sans">
-                    Thank you for reaching out. Ravishka will get back to you shortly.
+                  <p className="text-[#9a9894] text-xs max-w-sm mx-auto leading-relaxed font-sans">
+                    Your message has been sent directly to:
+                    <span className="text-white font-mono block font-medium text-xs my-2 px-2 py-1 bg-white/5 border border-white/10 rounded">
+                      {profile.email}
+                    </span>
+                    Ravishka will receive it in his Gmail inbox and reply to your email ({formData.email || 'your email'}) shortly.
                   </p>
                   <button
                     onClick={() => { setSubmitted(false); setFormData({ name: '', email: '', subject: '', message: '' }); }}
-                    className="mt-4 text-xs font-mono text-[#ff4d00] hover:underline"
+                    className="mt-4 text-xs font-mono text-[#ff4d00] hover:underline block mx-auto"
                   >
                     Send another message →
                   </button>
@@ -174,7 +220,7 @@ export const ContactSection: React.FC = () => {
                     className="w-full py-3 rounded bg-[#ff4d00] hover:bg-[#ff7137] text-black font-semibold uppercase tracking-wider transition-all flex items-center justify-center gap-2 mt-2"
                   >
                     {isSubmitting ? (
-                      <span>SENDING...</span>
+                      <span>TRANSMITTING...</span>
                     ) : (
                       <>
                         <span>SEND MESSAGE</span>

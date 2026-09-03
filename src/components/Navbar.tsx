@@ -75,8 +75,16 @@ export const Navbar: React.FC = () => {
 
       {/* Exact whoislsam Availability Badge */}
       <a 
-        href={`mailto:${portfolioData.profile.email}`} 
-        className="availability-exact hidden sm:flex"
+        href="#contact" 
+        onClick={(e) => {
+          e.preventDefault();
+          const el = document.getElementById('contact');
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }}
+        className="availability-exact hidden sm:flex cursor-pointer"
+        aria-label="Scroll to contact section"
       >
         <i aria-hidden="true" />
         <span>Available to connect</span>
