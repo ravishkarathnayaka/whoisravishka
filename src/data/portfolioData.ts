@@ -112,8 +112,8 @@ export const portfolioData = {
     displayTitle: "BUILDING INTELLIGENT",
     displayTitleItalic: "EXPERIENCES THAT MATTER.",
     lead: "I'm a Cybersecurity undergraduate with a passion for Security and Artificial Intelligence. I enjoy solving real-world problems through code and building impactful solutions that improve people's lives.",
-    body1: "As Chairman of the IEEE Computer Society Student Branch Chapter of SLTC, Founding Chair of CloudSpace v1.0, and Chair of Codemania V6.0 Datathon, I bridge technical engineering with community leadership. With hands-on experience in Python, TypeScript, and Azure, I build resilient systems that protect software supply chains and scale cloud workloads.",
-    body2: "Outside of engineering and community mentorship, I am an active videographer and media director. I explore research, contribute to open-source software, and create content that turns technical complexity into compelling visual narratives.",
+    body1: "With hands-on experience in Python, TypeScript, and Azure, I specialize in designing and deploying secure AI systems and resilient cloud workflows. I am particularly interested in the intersection of security, machine learning, and human-centric software engineering.",
+    body2: "Outside of engineering, I explore research, contribute to open-source projects, and stay up to date with the latest developments in AI and security, while capturing compelling visual stories through creative videography.",
     whatIDo: [
       {
         number: "01",

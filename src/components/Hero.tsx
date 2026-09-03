@@ -19,9 +19,9 @@ export const Hero: React.FC = () => {
 
       {/* Telemetry B (Right Middle) */}
       <div className="hero-telemetry-exact telemetry-b-exact" aria-hidden="true">
-        <span>PRIMARY LEADERSHIP</span>
-        <strong>CHAIRMAN</strong>
-        <small>IEEE CS SLTC</small>
+        <span>IDENTITY SIGNAL</span>
+        <strong>98.7%</strong>
+        <small>CONFIDENCE</small>
       </div>
 
       {/* Top Kicker (Top Left) */}
@@ -66,7 +66,7 @@ export const Hero: React.FC = () => {
         Cybersecurity Undergraduate<br />
         <span>Passionate about Security &amp; AI</span>
         <small>
-          Public identity: Ravishka Rathnayaka · Chairman — IEEE Computer Society of SLTC
+          Public identity: Ravishka Rathnayaka · Based in Sri Lanka
         </small>
       </div>
 

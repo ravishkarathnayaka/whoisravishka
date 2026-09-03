@@ -72,7 +72,7 @@ export const Manifesto: React.FC = () => {
             </p>
 
             <div className="font-mono text-xs text-[#9a9894] tracking-wider py-2">
-              Based in Colombo, Sri Lanka · <strong className="text-white font-normal">Chairman — IEEE Computer Society of SLTC</strong> · Founding Chair of CloudSpace v1.0 · Chair of Codemania V6.0 Datathon
+              Based in Colombo, Sri Lanka · Sri Lanka Technology Campus (SLTC)
             </div>
 
             {/* Social Profile Badges */}
