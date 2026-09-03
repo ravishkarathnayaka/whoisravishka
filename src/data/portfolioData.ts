@@ -77,10 +77,11 @@ export const portfolioData = {
     terminalHandle: "$ ravishkadev|",
     role: "Cybersecurity Undergraduate",
     secondaryRole: "MLOps & DevOps Enthusiast · Videographer",
+    primaryLeadership: "Chairman — IEEE Computer Society of SLTC",
     tagline: "Securing systems, automating pipelines, and capturing stories through the lens.",
     email: "contact.ravishkarathnayaka@gmail.com",
     location: "Colombo, Sri Lanka",
-    status: "OPEN TO PROJECTS",
+    status: "OPEN TO PROJECTS & LEADERSHIP",
     avatar: "/assets/profile-avatar-Bkr0Vkuw.jpg",
     portrait: "/assets/about-photo-DQIgbcQs.jpg",
     creativeBanner: "/assets/thanks-hero-Dix1hF-a.jpg",
@@ -93,7 +94,7 @@ export const portfolioData = {
     },
     metrics: [
       { count: "4+", label: "Years in Tech", sub: "Continuous hands-on practice" },
-      { count: "18+", label: "GitHub Repositories", sub: "Open-source & enterprise builds" },
+      { count: "18+", label: "GitHub Repositories", sub: "DevSecOps, SOAR & AI builds" },
       { count: "21+", label: "Tech Events Led", sub: "CloudSpace, Codemania & IEEE" },
       { count: "4.0", label: "HND GPA / First Class", sub: "SLTC Cyber Security & ICET" }
     ],
@@ -101,6 +102,7 @@ export const portfolioData = {
       posture: "DEVSECOPS / ACTIVE",
       status: "OPEN TO PROJECTS",
       uptime: "99.9% UPTIME",
+      leadershipRole: "Chairman — IEEE Computer Society of SLTC",
       shellCommand: "docker compose up -d && python -m uvicorn app.main:app"
     }
   },
@@ -110,8 +112,8 @@ export const portfolioData = {
     displayTitle: "BUILDING INTELLIGENT",
     displayTitleItalic: "EXPERIENCES THAT MATTER.",
     lead: "I'm a Cybersecurity undergraduate with a passion for MLOps, DevOps, and videography. I enjoy solving real-world problems through code and building impactful solutions that improve people's lives.",
-    body1: "With hands-on experience in Python, TypeScript, and Azure, I specialize in designing and deploying AI systems that deliver real business value. I am particularly interested in the intersection of AI and human-computer interaction, focusing on creating technologies that enhance human capabilities rather than replace them.",
-    body2: "Outside of work, I explore research, contribute to open-source projects, and stay up to date with the latest in AI. I also enjoy giving back to the community by volunteering, sharing knowledge, and creating content to help others grow and reach their goals.",
+    body1: "As Chairman of the IEEE Computer Society Student Branch Chapter of SLTC, Founding Chair of CloudSpace v1.0, and Chair of Codemania V6.0 Datathon, I bridge technical engineering with community leadership. With hands-on experience in Python, TypeScript, and Azure, I build resilient systems that protect software supply chains and scale cloud workloads.",
+    body2: "Outside of engineering and community mentorship, I am an active videographer and media director. I explore research, contribute to open-source software, and create content that turns technical complexity into compelling visual narratives.",
     whatIDo: [
       {
         number: "01",
@@ -128,14 +130,14 @@ export const portfolioData = {
       {
         number: "03",
         title: "Full-Stack & AI Systems",
-        desc: "Develop full-stack web applications with React, TypeScript, Python, and Supabase; deploy machine learning prediction models.",
+        desc: "Develop full-stack web applications with React, TypeScript, Python, and Supabase; deploy machine learning models.",
         badge: "AI & SOFTWARE"
       },
       {
         number: "04",
-        title: "Videography & Community",
-        desc: "Direct cinematic event recap films, lead national datathons and cloud conferences, and volunteer across 21+ tech events.",
-        badge: "MEDIA & LEADERSHIP"
+        title: "Community Leadership & Media",
+        desc: "Chairman of IEEE Computer Society at SLTC, Founding Chair of CloudSpace v1.0, and cinematic videographer for tech summits.",
+        badge: "LEADERSHIP & MEDIA"
       }
     ],
     techStack: [
@@ -168,7 +170,7 @@ export const portfolioData = {
       category: "Cybersecurity & Systems Defense",
       tools: ["Supply Chain Security", "SLSA Level 3", "Cosign Keyless", "Kyverno", "Trivy", "Linux Hardening"],
       summary: "Software supply chain security, automated threat detection, and system audits.",
-      description: "Rooted in his BSc in Cyber Security at SLTC. Specializes in SLSA Level 3 compliant pipelines, SBOM generation, cryptographic artifact signing with Cosign, and Kubernetes admission policies.",
+      description: "Undergraduate reading for BSc in Cyber Security at SLTC. Specializes in SLSA Level 3 compliant pipelines, SBOM generation, cryptographic artifact signing with Cosign, and Kubernetes admission control.",
       connectedTo: ["docker", "devops", "cloud", "mlops", "python", "video"]
     },
     {
@@ -555,12 +557,12 @@ export const portfolioData = {
 
   community: [
     {
-      name: "IEEE Student Branch Of SLTC",
-      role: "Head - Membership Development, Computer Society Chapter",
+      name: "IEEE Computer Society of SLTC",
+      role: "Chairman",
       period: "2024 — PRESENT",
       current: true,
-      description: "Founding Chairperson of CloudSpace v1.0 — Sri Lanka's largest cloud computing event and SLTC's first-ever cloud computing initiative. Volunteered as Chairperson for Codemania V6.0 — Sri Lanka's largest inter-university Datathon and the first-ever datathon in SLTC. Actively volunteered across 21+ tech events in finance, program coordination, partnerships, and various organizational roles.",
-      featuredHighlight: "Founding Chair of CloudSpace v1.0 & Chair of Codemania V6.0",
+      description: "Serving as Chairman of the IEEE Computer Society Student Branch Chapter of SLTC. Founding Chairperson of CloudSpace v1.0 (SLTC's first-ever cloud computing initiative) and Chairperson for Codemania V6.0 Datathon (Sri Lanka's largest inter-university Datathon). Leading a vibrant community of computing students and organizing 21+ national tech initiatives.",
+      featuredHighlight: "Chairman — IEEE Computer Society of SLTC",
       link: "https://www.linkedin.com/company/iabordsltc/",
       logo: "/assets/ieee-sl-logo-B0fZztNC.jpg"
     },
