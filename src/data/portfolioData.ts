@@ -168,9 +168,9 @@ export const portfolioData = {
       y: 48,
       isCore: true,
       category: "Cybersecurity & Systems Defense",
-      tools: ["Supply Chain Security", "SLSA Level 3", "Cosign Keyless", "Kyverno", "Trivy", "Linux Hardening"],
-      summary: "Software supply chain security, automated threat detection, and system audits.",
-      description: "Undergraduate reading for BSc in Cyber Security at SLTC. Specializes in SLSA Level 3 compliant pipelines, SBOM generation, cryptographic artifact signing with Cosign, and Kubernetes admission control.",
+      tools: ["eBPF Kernel Probes", "Syscall Tracepoints", "Supply Chain Security", "SLSA Level 3", "Cosign Keyless", "Kyverno", "Trivy", "Linux Hardening"],
+      summary: "Kernel-level runtime threat detection, software supply chain security, and automated SOAR pipelines.",
+      description: "Undergraduate reading for BSc in Cyber Security at SLTC. Specializes in eBPF Linux runtime threat detection, SLSA Level 3 compliant DevSecOps pipelines, SBOM generation, cryptographic signing with Cosign, and Kubernetes admission control.",
       connectedTo: ["docker", "devops", "cloud", "mlops", "python", "video"]
     },
     {
@@ -253,6 +253,25 @@ export const portfolioData = {
   ] as SkillNode[],
 
   projects: [
+    {
+      id: "ebpf-linux-edr-sensor",
+      title: "eBPF-Powered Linux Runtime Threat Detection & EDR Agent",
+      category: "cybersecurity",
+      categoryLabel: "Kernel Security & eBPF EDR",
+      description: "Industrial Linux Endpoint Detection and Response (EDR) sensor using in-kernel eBPF syscall tracepoints, zero-copy ring buffers, and MITRE ATT&CK runtime rule evaluation.",
+      longDescription: "An open-source, production-grade Linux Endpoint Detection and Response (EDR) agent powered by Extended Berkeley Packet Filter (eBPF). Attaches lightweight in-kernel C probes to raw Linux system call tracepoints (sys_enter_execve, sys_enter_connect, sys_enter_ptrace, sys_enter_openat), streams binary telemetry via zero-copy BPF perf ring buffers (<1.2% CPU overhead), normalizes kernel events, and evaluates runtime behavior against customizable YAML detection rules mapped to MITRE ATT&CK v14 tactics and techniques.",
+      image: "/assets/projects/ebpf-edr-ui.jpg",
+      tags: ["C (Kernel eBPF)", "Python 3.10+", "BCC", "Linux Kernel", "MITRE ATT&CK", "EDR", "Docker", "Syscall Tracepoints"],
+      metrics: "<1.2% CPU Overhead · 4 Kernel Probes · MITRE ATT&CK v14",
+      github: "https://github.com/ravishkarathnayaka/eBPF-Powered-Linux-Runtime-Threat-Detection-EDR-Agent",
+      live: "https://github.com/ravishkarathnayaka/eBPF-Powered-Linux-Runtime-Threat-Detection-EDR-Agent",
+      highlights: [
+        "In-kernel syscall hook monitoring: execve, connect, ptrace, and openat with zero-copy BPF perf ring buffers",
+        "Multi-threaded Python user-space daemon decoding binary C-structs and normalizing system telemetry",
+        "Modular YAML detection engine with boolean trees, regex matching, and MITRE ATT&CK matrix enrichment",
+        "Real-time attack simulation harness detecting interactive reverse shells, process memory injection, and priv-esc"
+      ]
+    },
     {
       id: "slsa-level-3-pipeline",
       title: "Enterprise Software Supply Chain Security (SLSA Level 3)",

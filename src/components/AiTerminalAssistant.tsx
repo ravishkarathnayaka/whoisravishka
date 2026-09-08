@@ -76,8 +76,8 @@ export const AiTerminalAssistant: React.FC = () => {
         reply = "Ravishka specializes in:\n• DevOps & Cloud: Docker, Kubernetes, CI/CD, GitHub Actions, Terraform, Microsoft Azure, AWS\n• Cybersecurity: Incident Triage, Network Protocol Analysis, Port Scanning, Linux Hardening, Wireshark, Snort\n• MLOps & AI: Python, FastAPI, PyTorch, LangChain, Ollama local model inference\n• Full-Stack: React, TypeScript, PostgreSQL, Next.js";
         links = [{ label: 'Open Constellation Graph', href: '#constellation' }];
       } else if (lower.includes('project') || lower.startsWith('/projects')) {
-        reply = "Key documented builds include:\n1. Hardened CI/CD & Automated DevSecOps Pipeline (Trivy + K8s)\n2. Local LLM Inference Engine & RAG Pipeline (Ollama + LangChain)\n3. CloudSpace v1.0 National Event Platform\n4. Codemania V6.0 Datathon Engine\n5. Automated Vulnerability & Reconnaissance Tool\n6. CineVision Videography Portfolio";
-        links = [{ label: 'Explore Project Archive', href: '#work' }];
+        reply = "Key documented builds include:\n1. eBPF Linux Runtime Threat Detection & EDR Agent (<1.2% CPU)\n2. Enterprise Software Supply Chain Security (SLSA Level 3)\n3. Multi-Cloud Automated Threat Detection & SOAR Pipeline\n4. TrialReady LK AI-Assisted Driving Academy Management\n5. UniFlow Student Productivity Hub (Azure)\n6. Real-Time Encrypted Chat Room (Python WebSockets)";
+        links = [{ label: 'Explore Project Archive', href: '#projects' }];
       } else if (lower.includes('experience') || lower.includes('work') || lower.includes('metadew') || lower.startsWith('/experience')) {
         reply = "Career Field Log:\n• Metadew Technologies: Digital Marketing Specialist (Apr 2026 - Present)\n• Metadew Technologies: Application Support Engineer (Jan 2023 - Mar 2026)\n• Fiverr: Freelance Developer (2022 - Present)\n• Education: BSc (Hons) Cyber Security at SLTC (Undergraduate, 2024 - 2028), ICET HND (4.0 GPA), SLIM Diploma.";
         links = [{ label: 'View Full Timeline', href: '#journey' }];
