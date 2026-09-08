@@ -260,7 +260,7 @@ export const portfolioData = {
       categoryLabel: "Kernel Security & eBPF EDR",
       description: "Industrial Linux Endpoint Detection and Response (EDR) sensor using in-kernel eBPF syscall tracepoints, zero-copy ring buffers, and MITRE ATT&CK runtime rule evaluation.",
       longDescription: "An open-source, production-grade Linux Endpoint Detection and Response (EDR) agent powered by Extended Berkeley Packet Filter (eBPF). Attaches lightweight in-kernel C probes to raw Linux system call tracepoints (sys_enter_execve, sys_enter_connect, sys_enter_ptrace, sys_enter_openat), streams binary telemetry via zero-copy BPF perf ring buffers (<1.2% CPU overhead), normalizes kernel events, and evaluates runtime behavior against customizable YAML detection rules mapped to MITRE ATT&CK v14 tactics and techniques.",
-      image: "/assets/projects/ebpf-edr-ui.jpg",
+      image: "/assets/projects/ebpf-edr-real.png",
       tags: ["C (Kernel eBPF)", "Python 3.10+", "BCC", "Linux Kernel", "MITRE ATT&CK", "EDR", "Docker", "Syscall Tracepoints"],
       metrics: "<1.2% CPU Overhead · 4 Kernel Probes · MITRE ATT&CK v14",
       github: "https://github.com/ravishkarathnayaka/eBPF-Powered-Linux-Runtime-Threat-Detection-EDR-Agent",
