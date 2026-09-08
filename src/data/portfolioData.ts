@@ -264,7 +264,7 @@ export const portfolioData = {
       tags: ["C (Kernel eBPF)", "Python 3.10+", "BCC", "Linux Kernel", "MITRE ATT&CK", "EDR", "Docker", "Syscall Tracepoints"],
       metrics: "<1.2% CPU Overhead · 4 Kernel Probes · MITRE ATT&CK v14",
       github: "https://github.com/ravishkarathnayaka/eBPF-Powered-Linux-Runtime-Threat-Detection-EDR-Agent",
-      live: "https://github.com/ravishkarathnayaka/eBPF-Powered-Linux-Runtime-Threat-Detection-EDR-Agent",
+      live: "https://e-bpf-powered-linux-runtime-threat.vercel.app/",
       highlights: [
         "In-kernel syscall hook monitoring: execve, connect, ptrace, and openat with zero-copy BPF perf ring buffers",
         "Multi-threaded Python user-space daemon decoding binary C-structs and normalizing system telemetry",
