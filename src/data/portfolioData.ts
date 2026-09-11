@@ -254,6 +254,25 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "ad-purple-team-range",
+      title: "Automated Active Directory Attack & Detection Range (Purple Teaming)",
+      category: "cybersecurity",
+      categoryLabel: "Active Directory & Purple Teaming",
+      description: "Enterprise-grade automated Active Directory attack emulation and Sigma detection engineering lab with Sysmon telemetry, Elastic SIEM, and pySigma CI verification.",
+      longDescription: "An enterprise-grade, zero-cost automated purple teaming range and detection engineering lab. Deploys an isolated Active Directory forest (Windows Server 2019 DC01 & Windows 10 WS01) via Vagrant/VirtualBox, executes simulated credential access attacks (Kerberoasting, AS-REP Roasting, DCSync, Pass-the-Hash), collects telemetry with tuned Sysmon and Windows Advanced Audit policies forwarding to an Elastic SIEM stack (Elasticsearch/Kibana), and validates high-fidelity Sigma v2 detection rules via automated pySigma CI regression tests.",
+      image: "/assets/projects/ad-purple-team-real.png",
+      tags: ["Active Directory", "Sigma Rules", "Purple Teaming", "Sysmon", "Elasticsearch", "PowerShell", "Vagrant", "MITRE ATT&CK", "Docker"],
+      metrics: "100% Detection Fidelity · <2.1s MTTD · 20/20 Passing Sigma CI",
+      github: "https://github.com/ravishkarathnayaka/Automated-Active-Directory-Attack-Detection-Range-Purple-Teaming-",
+      live: "https://automated-active-directory-attack-d.vercel.app",
+      highlights: [
+        "Automated multi-phase attack emulation: Kerberoasting (T1558.003), AS-REP Roasting (T1558.004), DCSync (T1003.006), and Pass the Hash (T1550.002)",
+        "Customized Windows Advanced Audit Policies and Sysmon configuration tuned for AD credential abuse and lateral movement",
+        "High-fidelity Sigma rule correlation engine linking Security Events 4768, 4769, 4662, 4624, and Sysmon Event ID 1",
+        "Automated CI pipeline with pySigma and Pytest running automated rule verification against synthetic event payloads"
+      ]
+    },
+    {
       id: "ebpf-linux-edr-sensor",
       title: "eBPF-Powered Linux Runtime Threat Detection & EDR Agent",
       category: "cybersecurity",
