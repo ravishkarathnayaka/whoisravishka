@@ -254,6 +254,25 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "ztna-identity-aware-gateway",
+      title: "Zero Trust Network Access (ZTNA) & Identity-Aware Microsegmentation Gateway",
+      category: "cybersecurity",
+      categoryLabel: "Zero Trust & NIST SP 800-207",
+      description: "Enterprise NIST SP 800-207 compliant Zero Trust Architecture implementing Envoy Proxy PEP, Keycloak OIDC, Open Policy Agent (OPA) Rego v1, and device posture verification.",
+      longDescription: "An enterprise-grade Zero Trust Network Access (ZTNA) and Identity-Aware Microsegmentation Gateway strictly aligned with the NIST SP 800-207 standard. Eliminates perimeter trust by dynamically evaluating every request using Envoy Proxy v1.30 as a Policy Enforcement Point (PEP), Keycloak 24 for OpenID Connect (OIDC) JWT identity claims, and Open Policy Agent (OPA) written in Rego v1 for continuous RBAC and device posture evaluation (disk encryption, OS patch level, corporate management) across isolated microservice networks.",
+      image: "/assets/projects/ztna-gateway-real.png",
+      tags: ["Zero Trust (NIST SP 800-207)", "Envoy Proxy", "Open Policy Agent (OPA)", "Keycloak OIDC", "Rego v1", "Docker", "Python FastAPI", "mTLS / PKI"],
+      metrics: "NIST SP 800-207 Compliant · 100% Policy Pass Rate · Zero Perimeter Trust",
+      github: "https://github.com/ravishkarathnayaka/zero-trust-identity-aware-gateway",
+      live: "https://zero-trust-identity-aware-gateway.vercel.app",
+      highlights: [
+        "NIST SP 800-207 compliant Policy Enforcement Point (PEP) via Envoy Proxy v1.30 with ext_authz HTTP filter",
+        "Dynamic Policy Engine (PE) powered by Open Policy Agent (OPA) running declarative Rego v1 security rules",
+        "Enterprise Identity Provider (Keycloak 24) issuing cryptographically signed RS256 OIDC JSON Web Tokens",
+        "Continuous device posture validation requiring disk encryption, enterprise management, and verified patch levels"
+      ]
+    },
+    {
       id: "ad-purple-team-range",
       title: "Automated Active Directory Attack & Detection Range (Purple Teaming)",
       category: "cybersecurity",
