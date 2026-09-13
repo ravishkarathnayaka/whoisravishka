@@ -254,6 +254,25 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "automated-threat-intelligence-engine",
+      title: "Automated Threat Intelligence Aggregator & Feed Scoring Engine",
+      category: "cybersecurity",
+      categoryLabel: "Cyber Threat Intelligence (CTI) & SecOps",
+      description: "Production-grade CTI engine automating multi-feed ingestion (AbuseIPDB, URLhaus, CISA KEV), mathematical confidence scoring, and automated firewall/DNS sinkhole rule exports.",
+      longDescription: "A production-grade Cyber Threat Intelligence (CTI) aggregation and scoring engine. Ingests raw Indicators of Compromise (IoCs) across open threat feeds (AbuseIPDB, Abuse.ch URLhaus, CISA KEV), executes automated defanging and deduplication, enforces hard RFC 1918 / DNS whitelist filtering to eliminate false positives, and calculates multi-factor confidence scores (0-100) using source reliability weights, cross-feed confirmation multipliers, and exponential time decay. Automatically generates synchronized enforcement exports including Suricata/Snort IDS rules, iptables/pfSense firewall blocklists, BIND 9 DNS Response Policy Zones (RPZ), and OASIS STIX 2.1 JSON bundles.",
+      image: "/assets/projects/threat-intel-real.png",
+      tags: ["Python 3.11", "FastAPI", "STIX 2.1", "DNS RPZ", "Suricata", "Snort", "AbuseIPDB", "CISA KEV", "Redis", "Docker"],
+      metrics: "STIX 2.1 Compliant · 0% False Positive Leakage · Real-Time Dynamic Feeds",
+      github: "https://github.com/ravishkarathnayaka/Automated-Threat-Intelligence-Aggregator-Feed-Scoring-Engine",
+      live: "https://automated-threat-intelligence-aggre.vercel.app",
+      highlights: [
+        "Multi-feed automated ingestion engine integrating AbuseIPDB, Abuse.ch URLhaus, and CISA KEV catalogs",
+        "Multi-factor mathematical scoring model incorporating source reliability, cross-source multipliers, and time decay",
+        "Zero false-positive filtration permanently suppressing RFC 1918 subnets and critical public DNS resolvers",
+        "Multi-format automated security exporters: Suricata/Snort rules, BIND 9 DNS RPZ, iptables, and OASIS STIX 2.1"
+      ]
+    },
+    {
       id: "ztna-identity-aware-gateway",
       title: "Zero Trust Network Access (ZTNA) & Identity-Aware Microsegmentation Gateway",
       category: "cybersecurity",
