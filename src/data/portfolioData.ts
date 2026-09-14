@@ -254,6 +254,25 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "k8s-runtime-security-platform",
+      title: "Kubernetes Runtime Security & Cloud-Native Incident Response Platform",
+      category: "cybersecurity",
+      categoryLabel: "Cloud-Native Security & eBPF SOAR",
+      description: "Enterprise Kubernetes runtime defense and automated SOAR platform combining Falco modern eBPF syscall telemetry, sub-second pod quarantine NetworkPolicies, and CIS benchmark auditing.",
+      longDescription: "An enterprise-grade, cloud-native runtime security detection and automated incident response platform. Leverages Falco with modern eBPF probes across multi-node Kubernetes clusters (Kind/Calico) to capture in-cluster syscall anomalies (execve, openat, connect) without third-party kernel modules. Integrates an asynchronous Python FastAPI response controller that executes sub-second automated containment: acquiring container stdout/stderr forensics, dynamically generating zero-traffic isolation NetworkPolicies, tagging compromised pod metadata, and auditing nodes against the CIS Kubernetes Benchmark via kube-bench.",
+      image: "/assets/projects/k8s-runtime-security-real.png",
+      tags: ["Kubernetes v1.30", "Falco (Modern eBPF)", "Python FastAPI", "NetworkPolicy Quarantine", "Calico CNI", "kube-bench", "Kind", "MITRE ATT&CK", "Docker"],
+      metrics: "<850ms Containment · 100% Network Isolation · CIS Benchmark Audited",
+      github: "https://github.com/ravishkarathnayaka/Kubernetes-Runtime-Security-Cloud-Native-Incident-Response-Platform.",
+      live: "https://kubernetes-runtime-security-cloud-n.vercel.app",
+      highlights: [
+        "Falco modern eBPF probe integration capturing kernel-level container syscall anomalies in real time",
+        "Automated incident response controller dynamically injecting zero-traffic isolation NetworkPolicies in <850ms",
+        "Digital forensics acquisition capturing live container stdout/stderr logs and pod YAML specs prior to isolation",
+        "Zero-cost multi-node Kubernetes architecture on Kind with Calico CNI and CIS benchmark auditing via kube-bench"
+      ]
+    },
+    {
       id: "automated-threat-intelligence-engine",
       title: "Automated Threat Intelligence Aggregator & Feed Scoring Engine",
       category: "cybersecurity",
