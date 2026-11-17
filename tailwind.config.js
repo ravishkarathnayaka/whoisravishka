@@ -7,6 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        cyberCyan: '#00F2FE',
+        cyberGreen: '#00FF87',
+        cyberBlack: '#05070B',
         cyber: {
           ink: '#060709',
           dark: '#090a0f',
