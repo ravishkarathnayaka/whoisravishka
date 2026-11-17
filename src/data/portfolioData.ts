@@ -254,6 +254,23 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "agentic-ai-security-firewall",
+      title: "Agentic AI Security Firewall & LLM Guardrails Proxy",
+      category: "cybersecurity",
+      categoryLabel: "AI Security & Autonomous Guardrails",
+      description: "Enterprise dual-layer reverse proxy securing agentic AI workflows against 512 attack vectors with STIX/TAXII 2.1 intelligence, Merkle audit ledger, and post-quantum lattice verification.",
+      longDescription: "An advanced agentic security firewall and LLM guardrails reverse proxy designed for multi-agent autonomous environments. Defends against indirect prompt injection, data exfiltration, agent delegation chain hijacking, and RAG vector memory poisoning across 512 benchmarked attack vectors. Features sub-4ms speculative decoding token analysis, quantum-resistant lattice verification, STIX/TAXII 2.1 threat feed synchronization, and a tamper-proof cryptographic Merkle audit ledger.",
+      image: "/assets/projects/k8s-runtime-security-real.png",
+      tags: ["AI Security", "LLM Guardrails", "FastAPI", "STIX/TAXII 2.1", "Merkle Ledger", "PQC Lattice", "Prompt Injection Defense", "Python 3.12"],
+      metrics: "99.8% Defense Rate · <4ms Overhead · 512 Attack Vectors Mitigated",
+      github: "https://github.com/ravishkarathnayaka/Agentic-AI-Security-Firewall-LLM-Guardrails-Proxy",
+      highlights: [
+        "Mitigates 512 distinct attack vectors including indirect prompt injection, jailbreaks, and honeypot bypasses",
+        "High-throughput dual-layer proxy architecture maintaining sub-4ms latency with speculative decoding verification",
+        "Quantum-resistant Merkle tree audit ledger ensuring non-repudiation for agent tool execution chains"
+      ]
+    },
+    {
       id: "k8s-runtime-security-platform",
       title: "Kubernetes Runtime Security & Cloud-Native Incident Response Platform",
       category: "cybersecurity",
