@@ -698,6 +698,15 @@ export const portfolioData = {
 
   articles: [
     {
+      title: "Practical Implementation of SLSA Level 3 CI/CD Attestations",
+      description: "How to cryptographically sign build pipelines using Cosign, in-toto attestations, and automated OpenSSF Scorecard evaluations.",
+      date: "Nov 08, 2026",
+      readTime: "8 min read",
+      link: "https://linkedin.com/in/ravishka-prabhath",
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800",
+      tags: ["Supply Chain", "SLSA 3", "Cosign", "DevSecOps"]
+    },
+    {
       title: "Hardening Autonomous Agents Against Indirect Prompt Injections",
       description: "Deep dive into multi-agent privilege boundaries, prompt honeypots, and token validation architectures for secure LLM pipelines.",
       date: "Nov 15, 2026",
