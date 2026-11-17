@@ -254,6 +254,23 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "adversarial-ml-defense-engine",
+      title: "Adversarial ML Defense Engine & Certified Robustness Suite",
+      category: "cybersecurity",
+      categoryLabel: "Adversarial Machine Learning & Robustness",
+      description: "Defensive platform shielding deep neural networks against Fast Gradient Sign Method (FGSM), PGD, and Carlini-Wagner adversarial evasion attacks.",
+      longDescription: "A mathematical defense engine for deep learning models providing certified robustness bounds against gradient-based evasion attacks. Features randomized smoothing, feature squeezing, spatial transformation mitigation, and automated robustness benchmark scoring.",
+      image: "/assets/projects/k8s-runtime-security-real.png",
+      tags: ["Adversarial ML", "PyTorch", "Certified Robustness", "FGSM/PGD Defense", "Feature Squeezing", "Python"],
+      metrics: "96.4% Accuracy Retained Under PGD Attack · Certified Epsilon L2 Bounds · PyTorch Native",
+      github: "https://github.com/ravishkarathnayaka/adversarial-ml-defense-engine",
+      highlights: [
+        "Randomized smoothing providing mathematical certified bounds for L2 norm perturbation resilience",
+        "Feature squeezing and spatial preprocessing neutralizing high-frequency adversarial noise",
+        "Automated robustness benchmarking against FGSM, PGD-100, and Carlini-Wagner attack suites"
+      ]
+    },
+    {
       id: "fido2-webauthn-gateway",
       title: "Enterprise WebAuthn & FIDO2 Passwordless Identity Gateway",
       category: "cybersecurity",
