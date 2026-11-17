@@ -698,6 +698,15 @@ export const portfolioData = {
 
   articles: [
     {
+      title: "Hardening Autonomous Agents Against Indirect Prompt Injections",
+      description: "Deep dive into multi-agent privilege boundaries, prompt honeypots, and token validation architectures for secure LLM pipelines.",
+      date: "Nov 15, 2026",
+      readTime: "9 min read",
+      link: "https://linkedin.com/in/ravishka-prabhath",
+      image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800",
+      tags: ["AI Security", "Prompt Injection", "Guardrails", "Autonomous Agents"]
+    },
+    {
       title: "Running Ollama AI Models on a Midrange Laptop: My Experience",
       description: "My experience installing and testing Ollama AI models locally on a midrange laptop with 16GB RAM and a 2GB GPU.",
       date: "Feb 27, 2026",
