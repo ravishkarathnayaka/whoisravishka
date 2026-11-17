@@ -617,6 +617,15 @@ export const portfolioData = {
 
   credentials: [
     {
+      id: "cred-slsa3",
+      title: "DevSecOps & Software Supply Chain SLSA Level 3 Specialist",
+      issuer: "OpenSSF (Open Source Security Foundation)",
+      issueDate: "2026",
+      category: "security",
+      credentialId: "OSSF-SLSA3-5192",
+      verificationUrl: "https://slsa.dev"
+    },
+    {
       id: "cred-pqc-crypto",
       title: "Post-Quantum Cryptography & Hardware Security Practitioner",
       issuer: "Quantum-Safe Security Guild",
