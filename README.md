@@ -102,3 +102,8 @@ npm run preview
 ---
 
 © 2026 Ravishka Rathnayaka. All rights reserved.
+
+
+## v2.1 Architecture Milestone & Security Portfolio Update
+
+This platform features 20+ cutting-edge cybersecurity, AI defense, and cloud-native systems, including eBPF EDR, Kubernetes runtime defense, LLM guardrails, and post-quantum lattice authentication.
