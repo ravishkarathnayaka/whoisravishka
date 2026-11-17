@@ -254,6 +254,23 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "autonomous-ai-soc-analyst",
+      title: "Autonomous AI SOC Analyst & Incident Response Agent",
+      category: "cybersecurity",
+      categoryLabel: "AI SOC & Automated Threat Triage",
+      description: "Multi-agent autonomous Tier-1 and Tier-2 SOC analyst automating SIEM alert correlation, threat intel enrichment, MITRE ATT&CK mapping, and SOAR containment playbooks.",
+      longDescription: "Production-grade autonomous Security Operations Center (SOC) agent operating on a multi-agent cooperative architecture. Integrates with Elastic SIEM, Wazuh, and Splunk to ingest raw telemetry, deduplicate alerts, correlate threat actors against MITRE ATT&CK enterprise matrices, and dynamically synthesize executed SOAR containment playbooks with human-in-the-loop validation.",
+      image: "/assets/projects/threat-intel-real.png",
+      tags: ["Multi-Agent Architecture", "SOC Automation", "MITRE ATT&CK", "Elastic SIEM", "Wazuh", "SOAR", "LangChain"],
+      metrics: "85% Alert Fatigue Reduction · 3.2s Alert Triage · 100% MITRE Tagging",
+      github: "https://github.com/ravishkarathnayaka/autonomous-ai-soc-analyst",
+      highlights: [
+        "Autonomous alert triage reducing Tier-1 SOC analyst notification fatigue by over 85%",
+        "Real-time correlation with MITRE ATT&CK techniques across endpoint, identity, and network logs",
+        "Automated playbook synthesis executing micro-containment actions with verifiable audit trails"
+      ]
+    },
+    {
       id: "autonomous-patching-bot",
       title: "Autonomous Agentic Patching & DevSecOps Remediation Bot",
       category: "cybersecurity",
