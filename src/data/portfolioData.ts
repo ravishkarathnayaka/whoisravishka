@@ -698,6 +698,15 @@ export const portfolioData = {
 
   articles: [
     {
+      title: "Kernel-Level Threat Detection Using eBPF and LSM Hooks",
+      description: "Architecting zero-overhead Linux endpoint defense engines using Falco modern eBPF and kernel runtime tracepoints.",
+      date: "Oct 28, 2026",
+      readTime: "11 min read",
+      link: "https://linkedin.com/in/ravishka-prabhath",
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
+      tags: ["eBPF", "Linux Security", "Kernel Hooks", "EDR"]
+    },
+    {
       title: "Practical Implementation of SLSA Level 3 CI/CD Attestations",
       description: "How to cryptographically sign build pipelines using Cosign, in-toto attestations, and automated OpenSSF Scorecard evaluations.",
       date: "Nov 08, 2026",
