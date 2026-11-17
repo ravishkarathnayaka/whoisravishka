@@ -617,6 +617,15 @@ export const portfolioData = {
 
   credentials: [
     {
+      id: "cred-pqc-crypto",
+      title: "Post-Quantum Cryptography & Hardware Security Practitioner",
+      issuer: "Quantum-Safe Security Guild",
+      issueDate: "2026",
+      category: "security",
+      credentialId: "QSSG-PQC-9013",
+      verificationUrl: "https://quantumsafe.org"
+    },
+    {
       id: "cred-caisp",
       title: "Certified AI Security Practitioner (CAISP)",
       issuer: "AI Security Alliance",
