@@ -254,6 +254,23 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "fido2-webauthn-gateway",
+      title: "Enterprise WebAuthn & FIDO2 Passwordless Identity Gateway",
+      category: "cybersecurity",
+      categoryLabel: "Zero Trust Identity & Access Management",
+      description: "Enterprise-grade FIDO2/WebAuthn authentication gateway enforcing hardware-backed biometric passkeys, CTAP2 attestation, and cryptographically verified zero-replay sessions.",
+      longDescription: "Modern zero-trust passwordless authentication server implementing the W3C WebAuthn Level 3 and FIDO Alliance CTAP2 standards. Eliminates credential stuffing, phishing, and session hijacking by requiring public-key cryptography tied to hardware security keys (YubiKeys) and platform biometrics (Touch ID / Windows Hello).",
+      image: "/assets/projects/ad-range-real.png",
+      tags: ["FIDO2", "WebAuthn Level 3", "Zero Trust", "CTAP2", "Passkeys", "Cryptographic Attestation", "TypeScript", "Node.js"],
+      metrics: "100% Phishing Resistance · Zero Credential Storage · FIDO Alliance Standard Compliant",
+      github: "https://github.com/ravishkarathnayaka/Enterprise-WebAuthn-FIDO2-Passwordless-Identity-Gateway",
+      highlights: [
+        "Complete implementation of FIDO2 CTAP2 specification preventing man-in-the-middle phishing attacks",
+        "Hardware token attestation validating authenticator cryptographic authenticity and tamper-resistance",
+        "Eliminates password storage entirely, storing only user public keys and cryptographic challenge nonces"
+      ]
+    },
+    {
       id: "malware-analysis-sandbox",
       title: "Automated Malware Analysis Sandbox with Memory Forensics",
       category: "cybersecurity",
