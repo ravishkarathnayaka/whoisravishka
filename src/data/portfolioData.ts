@@ -254,6 +254,23 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "llm-adversarial-red-teaming-fuzzer",
+      title: "LLM Adversarial Red-Teaming & Automated Jailbreak Fuzzer",
+      category: "cybersecurity",
+      categoryLabel: "GenAI Red Teaming & Offensive Security",
+      description: "Autonomous offensive red-teaming fuzzer probing foundation models for prompt injections, system prompt leaks, multi-turn Crescendo jailbreaks, and guardrail bypasses.",
+      longDescription: "Automated penetration testing and fuzzing harness built for generative AI deployments. Generates dynamic linguistic mutation trees, evaluates token entropy, and executes multi-turn conversational jailbreak exploits to stress-test enterprise LLM security guardrails.",
+      image: "/assets/projects/threat-intel-real.png",
+      tags: ["LLM Red Teaming", "Prompt Injection", "Jailbreak Fuzzing", "Python", "OWASP Top 10 for LLM", "Offensive Security"],
+      metrics: "12,000+ Automated Fuzz Vectors/hr · 100% OWASP LLM Top 10 Coverage · Multi-Turn Exploits",
+      github: "https://github.com/ravishkarathnayaka/llm-adversarial-red-teaming-fuzzer",
+      highlights: [
+        "Autonomous linguistic mutation engine discovering edge-case prompt injections and jailbreak patterns",
+        "Multi-turn Crescendo attack simulations bypassing state-of-the-art moderation and filter models",
+        "Automated vulnerability report generation mapping findings to OWASP LLM Top 10 categories"
+      ]
+    },
+    {
       id: "adversarial-ml-defense-engine",
       title: "Adversarial ML Defense Engine & Certified Robustness Suite",
       category: "cybersecurity",
