@@ -457,3 +457,13 @@
     scroll-behavior: auto !important;
   }
 }
+
+
+@keyframes cyberGlow {
+  0%, 100% { box-shadow: 0 0 15px rgba(0, 242, 254, 0.15); }
+  50% { box-shadow: 0 0 25px rgba(0, 242, 254, 0.35); }
+}
+
+.cyber-glow {
+  animation: cyberGlow 4s ease-in-out infinite;
+}
