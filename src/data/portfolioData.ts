@@ -254,6 +254,23 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "mlsecops-supply-chain-scanner",
+      title: "MLSecOps AI Model Supply Chain & Bytecode Scanner",
+      category: "cybersecurity",
+      categoryLabel: "AI Supply Chain & Model Security",
+      description: "Static and dynamic analysis engine detecting arbitrary code execution, malicious Pickle opcodes, and embedded malware in serialized AI weights.",
+      longDescription: "A specialized security auditing tool for machine learning model distribution pipelines. Disassembles Python pickle bytecodes, validates SafeTensors headers, inspects ONNX computation graphs, and prevents remote code execution (RCE) via weaponized model checkpoints.",
+      image: "/assets/projects/ebpf-edr-console.png",
+      tags: ["MLSecOps", "Pickle Bytecode", "SafeTensors", "Supply Chain Security", "Model Sandboxing", "Python AST"],
+      metrics: "Zero SafeTensors False Positives · Sub-2s Model Weight Scan · 100% Pickle RCE Detection",
+      github: "https://github.com/ravishkarathnayaka/MLSecOps-AI-Model-Supply-Chain-Malicious-Deserialization-Scanner",
+      highlights: [
+        "Pickle VM opcode disassembly flagging dangerous __reduce__ and os.system invocation chains",
+        "SafeTensors structural verification preventing header memory buffer overflow exploits",
+        "CI/CD pre-commit integration blocking unauthorized or unverified weights from reaching production"
+      ]
+    },
+    {
       id: "llm-adversarial-red-teaming-fuzzer",
       title: "LLM Adversarial Red-Teaming & Automated Jailbreak Fuzzer",
       category: "cybersecurity",
