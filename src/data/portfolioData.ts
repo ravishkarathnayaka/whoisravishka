@@ -254,6 +254,23 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "malware-analysis-sandbox",
+      title: "Automated Malware Analysis Sandbox with Memory Forensics",
+      category: "cybersecurity",
+      categoryLabel: "Threat Intelligence & Reverse Engineering",
+      description: "Isolated hypervisor-based sandbox analyzing zero-day malware binaries using Volatility 3 kernel memory dumping, API hook telemetry, and automated YARA rule synthesis.",
+      longDescription: "Hardened automated malware analysis system orchestrating isolated QEMU/KVM virtual machines. Hooks native Windows and Linux syscalls, captures network PCAP streams, generates Volatility 3 memory snapshots, and compiles dynamic behavioral telemetry into exportable YARA and Sigma detection rules.",
+      image: "/assets/projects/ztna-gateway-real.png",
+      tags: ["Malware Analysis", "Volatility 3", "QEMU/KVM", "YARA Engine", "Sigma Rules", "Memory Forensics", "Python"],
+      metrics: "100% Hypervisor Evasion Detection · Automated Sigma/YARA Output · Sub-90s Analysis",
+      github: "https://github.com/ravishkarathnayaka/Automated-Malware-Analysis-Sandbox-with-Memory-Forensics",
+      highlights: [
+        "Automated memory forensics with Volatility 3 detecting rootkits, DLL injection, and hollow processes",
+        "Hypervisor-level syscall hooking evading anti-VM and anti-debugging malware detection triggers",
+        "Dynamic synthesis of production-ready YARA and Sigma detection rules exported directly to SIEMs"
+      ]
+    },
+    {
       id: "autonomous-ai-soc-analyst",
       title: "Autonomous AI SOC Analyst & Incident Response Agent",
       category: "cybersecurity",
