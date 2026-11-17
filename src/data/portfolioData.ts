@@ -254,6 +254,23 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "cloud-native-soar-k8s",
+      title: "Cloud-Native Zero Trust SOAR Pipeline for Kubernetes",
+      category: "cybersecurity",
+      categoryLabel: "Kubernetes Security & Automated SOAR",
+      description: "Event-driven SOAR pipeline combining Tetragon eBPF kernel hooks, Open Policy Agent (OPA) Gatekeeper, and automated namespace micro-isolation.",
+      longDescription: "End-to-end cloud-native detection and response pipeline built for Kubernetes clusters. Intercepts privileged container escapes, enforces least-privilege egress policies dynamically, and triggers sub-second automated remediation playbooks across distributed clusters.",
+      image: "/assets/projects/k8s-runtime-security-real.png",
+      tags: ["Kubernetes", "eBPF Tetragon", "OPA Gatekeeper", "SOAR", "Cloud Security", "Helm", "Go"],
+      metrics: "<600ms Micro-Isolation · 100% OPA Enforced · Zero Kernel Module Dependancy",
+      github: "https://github.com/ravishkarathnayaka/cloud-threat-detection-soar-pipeline",
+      highlights: [
+        "Tetragon eBPF telemetry streaming real-time process execution and namespace escape attempts",
+        "OPA Gatekeeper admission control blocking non-compliant container specs at the API server",
+        "Automated micro-isolation quarantining compromised pods without causing cluster-wide downtime"
+      ]
+    },
+    {
       id: "rag-security-defense-gateway",
       title: "RAG Security & Vector Memory Poisoning Defense Gateway",
       category: "cybersecurity",
