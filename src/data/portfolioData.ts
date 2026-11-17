@@ -254,6 +254,23 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "rag-security-defense-gateway",
+      title: "RAG Security & Vector Memory Poisoning Defense Gateway",
+      category: "cybersecurity",
+      categoryLabel: "Retrieval-Augmented Generation Security",
+      description: "Real-time security gateway preventing vector store poisoning, unauthorized knowledge retrieval, and semantic embedding drift in enterprise RAG pipelines.",
+      longDescription: "Enterprise gateway inspecting text embeddings before indexing and retrieval. Identifies anomalous embedding distribution clusters, prevents vector database poisoning, and filters prompt-injected corpus documents before context is passed to LLM orchestrators.",
+      image: "/assets/projects/ztna-gateway-real.png",
+      tags: ["RAG Security", "Vector DB", "ChromaDB", "Qdrant", "Embedding Clustering", "Cosine Anomaly", "FastAPI"],
+      metrics: "99.1% Poisoning Detection · <5ms Cosine Verification · Zero Context Leakage",
+      github: "https://github.com/ravishkarathnayaka/rag-security-poisoning-defense-gateway",
+      highlights: [
+        "Embedding cluster outlier detection identifying maliciously injected corpus documents",
+        "Pre-retrieval semantic distance filtering preventing prompt-injected context injection",
+        "Strict Role-Based Access Control (RBAC) enforced at the individual vector chunk layer"
+      ]
+    },
+    {
       id: "mlsecops-supply-chain-scanner",
       title: "MLSecOps AI Model Supply Chain & Bytecode Scanner",
       category: "cybersecurity",
