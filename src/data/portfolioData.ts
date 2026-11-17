@@ -617,6 +617,15 @@ export const portfolioData = {
 
   credentials: [
     {
+      id: "cred-cks",
+      title: "Certified Kubernetes Security Specialist (CKS)",
+      issuer: "Cloud Native Computing Foundation (CNCF)",
+      issueDate: "2026",
+      category: "cloud",
+      credentialId: "LF-CKS-448102",
+      verificationUrl: "https://www.cncf.io/certification/cks/"
+    },
+    {
       id: "cred-crto",
       title: "Certified Red Team Operations Specialist (CRTO)",
       issuer: "Zero-Point Security",
