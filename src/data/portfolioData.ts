@@ -617,6 +617,15 @@ export const portfolioData = {
 
   credentials: [
     {
+      id: "cred-crto",
+      title: "Certified Red Team Operations Specialist (CRTO)",
+      issuer: "Zero-Point Security",
+      issueDate: "2026",
+      category: "security",
+      credentialId: "ZPS-CRTO-2026-9812",
+      verificationUrl: "https://zeropointsecurity.com/verification"
+    },
+    {
       id: "cred-sltc-degree",
       title: "BSc (Hons) in Cyber Security",
       issuer: "Sri Lanka Technology Campus (SLTC)",
