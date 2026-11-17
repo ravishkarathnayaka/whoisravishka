@@ -698,6 +698,15 @@ export const portfolioData = {
 
   articles: [
     {
+      title: "Post-Quantum Lattice Cryptography in Zero-Trust Architectures",
+      description: "Evaluating Kyber/ML-KEM lattice key encapsulation mechanisms and their real-world impact on authentication latency.",
+      date: "Oct 05, 2026",
+      readTime: "12 min read",
+      link: "https://linkedin.com/in/ravishka-prabhath",
+      image: "https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=800",
+      tags: ["Post-Quantum", "Cryptography", "Zero Trust", "FIDO2"]
+    },
+    {
       title: "Automated Memory Forensics with Volatility 3 and YARA Synthesis",
       description: "Building an automated memory analysis harness to detect process hollowing and inject zero-day signatures into detection engines.",
       date: "Oct 18, 2026",
