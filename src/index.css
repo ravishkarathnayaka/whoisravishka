@@ -437,3 +437,13 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #00F2FE;
 }
+
+
+@media (prefers-contrast: high) {
+  .border-white\/10 {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+  }
+  .text-white\/60 {
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+}
