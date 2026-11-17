@@ -617,6 +617,15 @@ export const portfolioData = {
 
   credentials: [
     {
+      id: "cred-caisp",
+      title: "Certified AI Security Practitioner (CAISP)",
+      issuer: "AI Security Alliance",
+      issueDate: "2026",
+      category: "security",
+      credentialId: "AISA-CAISP-7714",
+      verificationUrl: "https://aisecurityalliance.org"
+    },
+    {
       id: "cred-cks",
       title: "Certified Kubernetes Security Specialist (CKS)",
       issuer: "Cloud Native Computing Foundation (CNCF)",
