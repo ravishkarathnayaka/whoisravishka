@@ -698,6 +698,15 @@ export const portfolioData = {
 
   articles: [
     {
+      title: "Automated Memory Forensics with Volatility 3 and YARA Synthesis",
+      description: "Building an automated memory analysis harness to detect process hollowing and inject zero-day signatures into detection engines.",
+      date: "Oct 18, 2026",
+      readTime: "10 min read",
+      link: "https://linkedin.com/in/ravishka-prabhath",
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+      tags: ["Forensics", "Volatility 3", "Malware Analysis", "YARA"]
+    },
+    {
       title: "Kernel-Level Threat Detection Using eBPF and LSM Hooks",
       description: "Architecting zero-overhead Linux endpoint defense engines using Falco modern eBPF and kernel runtime tracepoints.",
       date: "Oct 28, 2026",
