@@ -254,6 +254,23 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "autonomous-patching-bot",
+      title: "Autonomous Agentic Patching & DevSecOps Remediation Bot",
+      category: "cybersecurity",
+      categoryLabel: "DevSecOps & Automated Remediation",
+      description: "Autonomous AI bot automating vulnerability remediation via AST semantic code transformation, regression test validation, and automated GitHub PR creation.",
+      longDescription: "A fully autonomous vulnerability remediation pipeline that monitors container and dependency CVE disclosures, parses abstract syntax trees (AST) to craft non-breaking security patches, and executes isolated sandboxed regression suites before opening cryptographically signed pull requests on GitHub.",
+      image: "/assets/projects/ebpf-edr-console.png",
+      tags: ["AST Rewriting", "Vulnerability Remediation", "DevSecOps", "GitHub Actions", "Python", "Trivy", "Docker Sandbox"],
+      metrics: "94.2% Automated PR Acceptance · <15 min MTTR · Zero Breaking Changes",
+      github: "https://github.com/ravishkarathnayaka/Autonomous-Agentic-Patching-DevSecOps-Remediation-Bot",
+      highlights: [
+        "Abstract Syntax Tree (AST) code manipulation generating surgical, non-breaking vulnerability patches",
+        "Sandboxed test validation executing complete regression suites before submitting pull requests",
+        "Reduced Mean Time to Remediation (MTTR) for high-severity CVEs from 48 hours to under 15 minutes"
+      ]
+    },
+    {
       id: "agentic-ai-security-firewall",
       title: "Agentic AI Security Firewall & LLM Guardrails Proxy",
       category: "cybersecurity",
